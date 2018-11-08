@@ -16,15 +16,17 @@ public class Recipe {
         this.ingredients=ingredients;
         this.HowManyPersons=HowManyPersons;  }
 
-    public ArrayRecipe(){
-        new Recipe=Recipe(String dish,String cookingTime,String Country, String ingredients, int HowManyPersons);
-        new Recipe=Recipe1(String dish,String cookingTime,String Country, String ingredients, int HowManyPersons);
-        new Recipe=Recipe2(String dish,String cookingTime,String Country, String ingredients, int HowManyPersons);
+    public static void Recipe(String[] args){
+        Recipe recipe01=new Recipe("","","", "", 8);
+        Recipe recipe02=new Recipe("","","", "", 7);
+        Recipe recipe03=new Recipe("","","", "", 6);
 
         ArrayList<Recipe> new Recipe = new ArrayList<>();
-        Recipe.add(Recipe);
-        Recipe.add(Recipe1);
-        Recipe.add(recipe2);
+        Recipe.add(recipe01);
+        Recipe.add(recipe02);
+        Recipe.add(recipe03);
+        
+        
     }
 }
 
