@@ -5,19 +5,37 @@ import java.util.ArrayList;
 public class User {
 
     private String name;
-    private String mail;
     private String password;
-    private int age;
     private ArrayList<String> tags = new ArrayList();
 
-    public User(String name, String mail, String password, int age, ArrayList<String> tags) {
+    public User(String name, String password, ArrayList<String> tags) {
         this.name = name;
-        this.mail = mail;
         this.password = password;
-        this.age = age;
         this.tags = tags;
     }
 
-    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public ArrayList<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(ArrayList<String> tags) {
+        this.tags = tags;
+    }
 }
 
