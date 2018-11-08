@@ -1,24 +1,28 @@
 package com.example.ptrbvs.foododo;
 
 public class username {
-    private String username;
+    private String usernames;
     private String password;
     private String age;
+    private String email;
+    private String phonenumber;
     private String preferences;
 
-    public username(String username, String password, String age, String preferences) {
-        this.username = username;
+    public username(String usernames, String password, String age, String email, String phonenumber, String preferences) {
+        this.usernames = usernames;
         this.password = password;
         this.age = age;
+        this.email=email;
+        this.phonenumber=phonenumber;
         this.preferences=preferences;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUsernames() {
+        return usernames;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsernames(String usernames) {
+        this.usernames = usernames;
     }
 
     public String getPassword() {
