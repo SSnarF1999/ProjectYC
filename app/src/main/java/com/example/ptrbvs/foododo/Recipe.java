@@ -21,7 +21,7 @@ public class Recipe {
         Recipe recipe02=new Recipe("","","", "", 7);
         Recipe recipe03=new Recipe("","","", "", 6);
 
-        ArrayList<Recipe> new Recipe = new ArrayList<>();
+        ArrayList<Recipe> Recipe = new ArrayList<>();
         Recipe.add(recipe01);
         Recipe.add(recipe02);
         Recipe.add(recipe03);
