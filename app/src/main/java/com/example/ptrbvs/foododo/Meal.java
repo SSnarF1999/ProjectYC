@@ -30,11 +30,11 @@ public class Meal {
 
     public String toString() {
         return
-                this.name + ":"                                              +
-                        " Ingredients: " + listPrinter(this.ingredients)     +
-                        " Tags: " + listPrinter(this.tags)                   +
-                        " Persons: " + Integer.toString(this.persons)        +
-                        " Time: " + this.time;
+                        this.name           + ":"                               +
+                        " Ingredients: "    + listPrinter(this.ingredients)     +
+                        " Tags: "           + listPrinter(this.tags)            +
+                        " Persons: "        + Integer.toString(this.persons)    +
+                        " Time: "           + this.time;
     }
 
     public String getName() {
@@ -84,6 +84,7 @@ public class Meal {
     public static void setMeals(ArrayList<Meal> meals) {
         Meals = meals;
     }
+
 }
 
 
