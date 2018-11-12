@@ -11,14 +11,7 @@ public class Meal {
     private int time;
     private static ArrayList<Meal> Meals = new ArrayList();
 
-    public Meal(String name, String[] ingredients, String[] tags, int persons, int time) {
-        this.name = name;
-        this.ingredients = ingredients;
-        this.tags = tags;
-        this.persons = persons;
-        this.time = time;
-        Meals.add(this);
-    }
+    public Meal() {}
 
     private String listPrinter( String[] in) {
         String out = "";
@@ -37,28 +30,44 @@ public class Meal {
                         " Time: "           + this.time;
     }
 
+    //Setters of arrays throw Exception for SQL safety (max size)
+
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName (String name) throws Exception {
+        if (name.length() >= 255) {
+            throw new Exception("input string too long");
+        }
+        else {
+            this.name = name;
+        }
     }
 
     public String[] getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String[] ingredients) {
-        this.ingredients = ingredients;
+    public void setIngredients(String[] ingredients) throws RuntimeException {
+        if (ingredients.length >= 255) {
+            throw new RuntimeException("input string too long");
+        } else {
+            this.ingredients = ingredients;
+        }
     }
 
     public String[] getTags() {
         return tags;
     }
 
-    public void setTags(String[] tags) {
-        this.tags = tags;
+    public void setTags(String[] tags) throws RuntimeException {
+        if (tags.length >= 255) {
+            throw new RuntimeException("input string too long");
+        }
+        else {
+            this.tags = tags;
+        }
     }
 
     public int getPersons() {
