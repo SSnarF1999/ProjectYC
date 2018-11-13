@@ -120,5 +120,6 @@
     <string name="nameUser">Name</string>
     <string name="age">Age</string>
     <string name="preferences">Preferences</string>
+    <string name="account1">Account</string>
 
 </resources>

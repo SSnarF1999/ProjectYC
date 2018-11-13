@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="33dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="@android:color/white"
         android:text="@string/users"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="34dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="@android:color/white"
         android:text="@string/choose_recipe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bUsers" />
@@ -35,7 +35,7 @@
         android:layout_height="185dp"
         android:layout_marginTop="107dp"
         android:layout_marginEnd="49dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bChoose"
         app:srcCompat="@mipmap/ic_launcher_round" />

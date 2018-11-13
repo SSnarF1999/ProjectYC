@@ -29,26 +29,18 @@ public class MainActivity extends AppCompatActivity {
         return true;
      }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.account:
-                Intent intent1 = new Intent(this, Account.class);
+            case R.id.action_account:
+                startActivity(new Intent(this, Account.class)) ;
+                return true;
+            case R.id.action_menu:
+                Intent intent1 = new Intent(this, MenuActivity.class);
                 this.startActivity(intent1);
                 return true;
-            case R.id.groups:
-                Intent intent2 = new Intent(this, GroupsActivity.class);
-                this.startActivity(intent2);
-                return true;
-            case R.id.Recipes:
-                Intent intent4 = new Intent(this, RecipeActivity.class);
-                this.startActivity(intent4);
-                return true;
-            case R.id.friends:
-                Intent intent3 = new Intent(this, FriendsActivitiy.class);
-                this.startActivity(intent3);
-                return true;
-             default:
         }
         return super.onOptionsItemSelected(item);
     }

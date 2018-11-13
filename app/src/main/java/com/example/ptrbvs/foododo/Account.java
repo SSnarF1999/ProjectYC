@@ -4,6 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -29,5 +32,25 @@ public class Account extends AppCompatActivity {
                 Account.this.startActivity(homeIntent);
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_account:
+                startActivity(new Intent(this, Account.class)) ;
+                return true;
+            case R.id.action_menu:
+                Intent intent1 = new Intent(this, MenuActivity.class);
+                this.startActivity(intent1);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

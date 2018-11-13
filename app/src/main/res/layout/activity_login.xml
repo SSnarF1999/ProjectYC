@@ -53,8 +53,10 @@
             android:id="@+id/bPieter"
             android:layout_width="149dp"
             android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
             android:text="Pieter"
             android:textAlignment="center"
+            android:textColor="@android:color/white"
             app:layout_column="0"
             app:layout_row="1" />
 
@@ -62,7 +64,9 @@
             android:id="@+id/bFrans"
             android:layout_width="152dp"
             android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
             android:text="Frans"
+            android:textColor="@android:color/white"
             app:layout_column="1"
             app:layout_row="1" />
 
@@ -70,7 +74,9 @@
             android:id="@+id/bTristan"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
             android:text="Tristan"
+            android:textColor="@android:color/white"
             app:layout_column="0"
             app:layout_row="3" />
 
@@ -78,7 +84,9 @@
             android:id="@+id/bJoy"
             android:layout_width="147dp"
             android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
             android:text="Joy"
+            android:textColor="@android:color/white"
             app:layout_column="1"
             app:layout_row="3" />
     </android.support.v7.widget.GridLayout>
