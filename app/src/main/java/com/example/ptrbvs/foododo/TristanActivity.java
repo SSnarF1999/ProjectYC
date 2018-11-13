@@ -1,44 +1,24 @@
 package com.example.ptrbvs.foododo;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.view.Menu;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
-
-    userData userdata = new userData();
-    User[] users = userdata.generateuserData();
-
-    mealData mealdata = new mealData();
-    Meal[] meals = mealdata.generateMeals();
-
-
-
+public class TristanActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-=======
+        setContentView(R.layout.activity_tristan);
 
-        ImageView ivJoy = (ImageView) findViewById(R.id.ivJoy);
-        int imageRescource = getResources().getIdentifier("@drawable/pokemon", null, this.getPackageName());
-        ivJoy.setImageResource(imageRescource);
->>>>>>> JoyNew2.0
+        ImageView ivTris = (ImageView) findViewById(R.id.ivTris);
+        int imageRescource = getResources().getIdentifier("@drawable/trainer", null, this.getPackageName());
+        ivTris.setImageResource(imageRescource);
     }
-
-    
 
     @Override
      public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
          inflater.inflate(R.menu.menu, menu);
         return true;
      }
+
 
 
 

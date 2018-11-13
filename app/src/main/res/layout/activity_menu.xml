@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <Button
+        android:id="@+id/bSwitch"
+        android:layout_width="294dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="33dp"
+        android:background="@android:color/background_dark"
+        android:drawableStart="@android:drawable/ic_media_play"
+        android:text="Switch User"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bFriends" />
+
+    <Button
+        android:id="@+id/bFriends"
+        android:layout_width="294dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="33dp"
+        android:background="@android:color/background_dark"
+        android:drawableStart="@android:drawable/ic_media_play"
+        android:text="Friends"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bRecipe" />
+
+    <Button
+        android:id="@+id/bRecipe"
+        android:layout_width="294dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="33dp"
+        android:background="@android:color/background_dark"
+        android:drawableStart="@android:drawable/ic_media_play"
+        android:text="Recipes"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bGroups" />
+
+    <Button
+        android:id="@+id/bGroups"
+        android:layout_width="294dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="33dp"
+        android:background="@android:color/background_dark"
+        android:drawableStart="@android:drawable/ic_media_play"
+        android:text="Groups"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bAccount" />
+
+    <Button
+        android:id="@+id/bAccount"
+        android:layout_width="294dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="33dp"
+        android:background="@android:color/background_dark"
+        android:drawableStart="@android:drawable/ic_media_play"
+        android:text="Account"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
