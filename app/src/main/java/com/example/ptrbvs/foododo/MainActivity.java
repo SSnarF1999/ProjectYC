@@ -15,6 +15,10 @@ import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    userData data = new userData();
+    User[] users = data.generateuserData();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
