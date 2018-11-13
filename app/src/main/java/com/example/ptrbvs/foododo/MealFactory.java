@@ -52,6 +52,10 @@ public class MealFactory {
         int time = Integer.parseInt(sc.nextLine());
         ml.setTime(time);
 
+        System.out.println("Instructions (just copy and paste): ");
+        String instructions = sc.nextLine();
+        ml.setInstructions(instructions);
+
         if (succes) {
             return ml;
         }

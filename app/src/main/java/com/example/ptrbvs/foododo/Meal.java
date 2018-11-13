@@ -9,11 +9,21 @@ public class Meal {
     private String[] tags;
     private int persons;
     private int time;
+    private String instructions;
     private static ArrayList<Meal> Meals = new ArrayList();
 
     public Meal() {}
 
-    private String listPrinter( String[] in) {
+    public Meal(String name, String[] ingredients, String[] tags, int persons, int time, String instructions) {
+        this.name = name;
+        this.ingredients = ingredients;
+        this.tags = tags;
+        this.persons = persons;
+        this.time = time;
+        this.instructions = instructions;
+    }
+
+    private String listPrinter(String[] in) {
         String out = "";
         for (String str : in) {
             out = out + ", " + str;
@@ -94,6 +104,13 @@ public class Meal {
         Meals = meals;
     }
 
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
 }
 
 
