@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         bPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         bFrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         bTristan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         ibPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         ibFrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         ibTristan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -100,31 +100,14 @@ public class LoginActivity extends AppCompatActivity {
         int imageRescource1 = getResources().getIdentifier("@drawable/schildpad", null, this.getPackageName());
         ibFrans.setImageResource(imageRescource1);
 
-        int imageRescource2 = getResources().getIdentifier("@drawable/images", null, this.getPackageName());
+        int imageRescource2 = getResources().getIdentifier("@drawable/trainer", null, this.getPackageName());
         ibTristan.setImageResource(imageRescource2);
 
         int imageRescource3 = getResources().getIdentifier("@drawable/pokemon", null, this.getPackageName());
         ibJoy.setImageResource(imageRescource3);
     }
 
-        @Override
-        public boolean onCreateOptionsMenu (Menu menu){
-            MenuInflater inflater = getMenuInflater();
-            inflater.inflate(R.menu.menu, menu);
-            return true;
-        }
 
-        @Override
-        public boolean onOptionsItemSelected (MenuItem item){
-            switch (item.getItemId()) {
-                case R.id.action_menu:
-                    Intent intent1 = new Intent(this, MenuActivity.class);
-                    this.startActivity(intent1);
-                    return true;
-                default:
-            }
-            return super.onOptionsItemSelected(item);
-        }
     }
 
 
