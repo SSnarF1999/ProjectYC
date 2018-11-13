@@ -25,7 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="Welkom"
+            android:parentActivityName=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,10 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".UserAreActivity"
-            android:label="UserAreActivity"
-            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Account"
             android:label="Account"
@@ -72,23 +70,27 @@
             android:name=".Tonights_recipeActivity"
             android:label="Tonights recipe"
             android:parentActivityName=".GroupChosenActivitiy" />
-        <activity android:name=".SearchFriendsActivity"
+        <activity
+            android:name=".SearchFriendsActivity"
             android:label="Search Friends"
-            android:parentActivityName=".FriendsActivitiy"/>
+            android:parentActivityName=".FriendsActivitiy" />
         <activity
             android:name=".RecipeActivity"
             android:label="Recipes"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".RecipeIngredientsActivity"
+        <activity
+            android:name=".RecipeIngredientsActivity"
             android:label="Recipe"
-            android:parentActivityName=".RecipeActivity"/>
-        <activity android:name=".GroupAddActivity"
+            android:parentActivityName=".RecipeActivity" />
+        <activity
+            android:name=".GroupAddActivity"
             android:label="Add Group"
-            android:parentActivityName=".GroupsActivity"/>
-        <activity android:name=".Group_usersActivity"
+            android:parentActivityName=".GroupsActivity" />
+        <activity
+            android:name=".Group_usersActivity"
             android:label="Users"
-            android:parentActivityName=".GroupChosenActivitiy"/>
+            android:parentActivityName=".GroupChosenActivitiy" />
+        <activity android:name=".PreferencesActivity"></activity>
     </application>
-
 
 </manifest>
