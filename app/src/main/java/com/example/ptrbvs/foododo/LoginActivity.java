@@ -32,6 +32,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -51,6 +52,12 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bLogin = (Button) findViewById(R.id.bLogin);
         final TextView registerlink = (TextView) findViewById(R.id.tvRegister);
+        final Button bPieter = (Button) findViewById(R.id.bPieter);
+        ImageButton ibPieter= (ImageButton) findViewById(R.id.ibPieter);
+        ImageButton ibFrans= (ImageButton) findViewById(R.id.ibFrans);
+        ImageButton ibTristan= (ImageButton) findViewById(R.id.ibTristan);
+        ImageButton ibJoy= (ImageButton) findViewById(R.id.ibJoy);
+
 
         registerlink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +74,26 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
+
+        bPieter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                LoginActivity.this.startActivity(loginIntent);
+            }
+        });
+
+        int imageRescource = getResources().getIdentifier("@drawable/images", null, this.getPackageName());
+        ibPieter.setImageResource(imageRescource);
+
+        int imageRescource1 = getResources().getIdentifier("@drawable/images", null, this.getPackageName());
+        ibFrans.setImageResource(imageRescource1);
+
+        int imageRescource2 = getResources().getIdentifier("@drawable/images", null, this.getPackageName());
+        ibTristan.setImageResource(imageRescource2);
+
+        int imageRescource3 = getResources().getIdentifier("@drawable/images", null, this.getPackageName());
+        ibJoy.setImageResource(imageRescource3);
     }
 
         @Override
