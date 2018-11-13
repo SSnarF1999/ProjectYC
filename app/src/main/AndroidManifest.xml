@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ptrbvs.foododo">
+
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -12,7 +14,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
@@ -22,6 +25,70 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".RegisterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserAreActivity"
+            android:label="UserAreActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Account"
+            android:label="Account"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GroupsActivity"
+            android:label="Groups"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FriendsActivitiy"
+            android:label="Friends"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GroupChosenActivitiy"
+            android:label="Group to eat with"
+            android:parentActivityName=".GroupsActivity" />
+        <activity
+            android:name=".Tonights_recipeActivity"
+            android:label="Tonights recipe"
+            android:parentActivityName=".GroupChosenActivitiy" />
+        <activity android:name=".SearchFriendsActivity"
+            android:label="Search Friends"
+            android:parentActivityName=".FriendsActivitiy"/>
+        <activity
+            android:name=".RecipeActivity"
+            android:label="Recipes"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".RecipeIngredientsActivity"
+            android:label="Recipe"
+            android:parentActivityName=".RecipeActivity"/>
+        <activity android:name=".GroupAddActivity"
+            android:label="Add Group"
+            android:parentActivityName=".GroupsActivity"/>
+        <activity android:name=".Group_usersActivity"
+            android:label="Users"
+            android:parentActivityName=".GroupChosenActivitiy"/>
     </application>
+
 
 </manifest>
