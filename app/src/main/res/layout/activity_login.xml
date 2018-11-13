@@ -14,33 +14,73 @@
 
     <!-- Login progress -->
 
-    <EditText
-        android:id="@+id/etUsename"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:hint="Username"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberPassword"
-        tools:hint="Password"
-        android:autofillHints="" />
-
-    <Button
-        android:id="@+id/bLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login" />
-
-    <TextView
-        android:id="@+id/tvRegister"
+    <android.support.v7.widget.GridLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register" />
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ibPieter"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            tools:id="ibPieter"
+            tools:srcCompat="@drawable/images" />
+
+        <ImageButton
+            android:id="@+id/ibFrans"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageButton
+            android:id="@+id/ibTristan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageButton
+            android:id="@+id/ibJoy"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_column="1"
+            app:layout_row="2"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/bPieter"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:text="Pieter"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/bFrans"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:text="Frans"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/bTristan"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:text="Tristan"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/bJoy"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="Joy"
+            app:layout_column="1"
+            app:layout_row="3" />
+    </android.support.v7.widget.GridLayout>
+
 </LinearLayout>

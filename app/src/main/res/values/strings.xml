@@ -117,4 +117,8 @@
     <string name="maybe">Maybe</string>
     <string name="not_availible">Not Availible</string>
     <string name="choose_recipe01">Choose Recipe</string>
+    <string name="nameUser">Name</string>
+    <string name="age">Age</string>
+    <string name="preferences">Preferences</string>
+
 </resources>
