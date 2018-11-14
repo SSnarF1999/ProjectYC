@@ -4,21 +4,21 @@ public class mealData {
 
     public Meal[] generateMeals() {
         //Pasta met rode saus
-        String ingr1 =   "400g rundergehakt,"           +
-                " 2 uien, gesnipperd,"          +
-                " 2 tenen knoflook, "           +
-                " 500g pasta, "                 +
+        String ingr1 = "400g rundergehakt," +
+                " 2 uien, gesnipperd," +
+                " 2 tenen knoflook, " +
+                " 500g pasta, " +
                 " 1 blik tomatenstukjes (400g)" +
-                " 2 blikjes tomatenpuree,"      +
-                " 2 paprika's,"                 +
-                " Olijfolie,"                   +
-                " Peper en zout,"               +
+                " 2 blikjes tomatenpuree," +
+                " 2 paprika's," +
+                " Olijfolie," +
+                " Peper en zout," +
                 " Geraspte kaas";
 
-        String tags1 =   " italiaans, " +
-                " warm,"       +
-                " kinderen,"   +
-                " pasta,"      +
+        String tags1 = " italiaans, " +
+                " warm," +
+                " kinderen," +
+                " pasta," +
                 " hoofdgerecht";
 
         String instr1 = "Zet een ruime hoeveelheid water in een grote pan met een snuf zout op het gas." +
@@ -34,21 +34,21 @@ public class mealData {
                 " zout en peper toe. Giet de pasta af en serveer de saus en de pasta en de kaas apart.\n";
         //*haalt adem*
 
-        Meal ml1 =  new Meal("Pasta m. rode saus", ingr1.split(", "), tags1.split(", "), 4, 20, instr1);
+        //Meal ml1 =  new Meal("Pasta m. rode saus", ingr1.split(", "), tags1.split(", "), 4, 20, instr1);
 
 
         //Zuurkool
-        String ingr2 =  "1.25kg aardappelen,"               +
-                " 500g zuurkool,"                   +
-                " 2 elstar-appels,"                 +
-                " 2 boeren scharrelrookworsten,"    +
-                " 40g ongezouten boter/margarine,"  +
+        String ingr2 = "1.25kg aardappelen," +
+                " 500g zuurkool," +
+                " 2 elstar-appels," +
+                " 2 boeren scharrelrookworsten," +
+                " 40g ongezouten boter/margarine," +
                 " 150ml halfvolle melk";
 
-        String tags2 =  "Kool,"         +
-                " Groente,"     +
-                " aardappel,"   +
-                " Hollands,"    +
+        String tags2 = "Kool," +
+                " Groente," +
+                " aardappel," +
+                " Hollands," +
                 " Duits";
 
         String instr2 = "Schil de aardappelen en kook in 20 min. gaar. Laat de zuurkool uitlekken." +
@@ -59,26 +59,26 @@ public class mealData {
                 "zuurkool grof. Voeg de melk toe en wat kookvocht. Schep de appel en boter erbij en" +
                 " serveer met de worst.";
 
-        Meal ml2 =  new Meal("Pasta m. rode saus", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
+        //Meal ml2 =  new Meal("Pasta m. rode saus", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
 
 
         //Pizza Calzone
-        String ingr3 =  "7g gedroogde gist (zakje),"    +
-                " 1 tl witte basterdsuiker,"    +
-                " 200ml water (lauwwarm),"      +
-                " 250g tarwebloem,"             +
-                " 1 tl zout,"                   +
+        String ingr3 = "7g gedroogde gist (zakje)," +
+                " 1 tl witte basterdsuiker," +
+                " 200ml water (lauwwarm)," +
+                " 250g tarwebloem," +
+                " 1 tl zout," +
                 " 4 el traditionele olijfolie," +
-                " 2 tenen knoflook,"            +
-                " 8g verse tijm,"               +
-                " 250g kastanjechampignons,"    +
+                " 2 tenen knoflook," +
+                " 8g verse tijm," +
+                " 250g kastanjechampignons," +
                 " 400g artisjokharten in blik," +
-                " 150g yorkham,"                +
-                " 250g romatomaten,"            +
+                " 150g yorkham," +
+                " 250g romatomaten," +
                 " 125g mozzarella";
 
-        String tags3 = "Pizza,"     +
-                " Italiaans,"   +
+        String tags3 = "Pizza," +
+                " Italiaans," +
                 " Kinderen";
 
         String instr3 = "Doe de gist en het suiker in een kom en roer er 50 ml (per 4 personen)" +
@@ -101,21 +101,21 @@ public class mealData {
                 " Leg de pizza's op een met bakpapier beklede bakplaat. Bak net onder het midden " +
                 "van de oven in ca. 15 min. goudbruin.\n";
 
-        Meal ml3 = new Meal("Pizza Calzone", ingr3.split(", "), tags3.split(", "), 4, 30, instr3);
+        //Meal ml3 = new Meal("Pizza Calzone", ingr3.split(", "), tags3.split(", "), 4, 30, instr3);
 
         //Brocolli-aardappeltaart
-        String ingr4 = " 700 g broccoli,"               +
-                " 700 g aardappelschijfjes,"        +
-                " 6 middelgrote eieren,"            +
-                " 150 g volle Franse kwark (bak),"  +
-                " 2 tenen knoflook,"                +
-                " 100 g geraspte belegen kaas,"     +
+        String ingr4 = " 700 g broccoli," +
+                " 700 g aardappelschijfjes," +
+                " 6 middelgrote eieren," +
+                " 150 g volle Franse kwark (bak)," +
+                " 2 tenen knoflook," +
+                " 100 g geraspte belegen kaas," +
                 " 100 g eikenbladslamelange (zak)," +
                 " 3 el sladressing knoflook";
 
-        String tags4 =  "vegetarisch,"          +
-                " groente,"             +
-                " gezond,"              +
+        String tags4 = "vegetarisch," +
+                " groente," +
+                " gezond," +
                 " bagger";
 
         String instr4 = "Verwarm de oven voor op 200 °C. Leg een royaal vel bakpapier in de " +
@@ -129,14 +129,15 @@ public class mealData {
                 "Neem de taart uit de oven en laat 5 min. staan. Maak ondertussen de slamelange " +
                 "aan met de dressing. Snijd de taart in punten en serveer met de salade.\n";
 
-        Meal ml4 = new Meal("Brocolli-aardappeltaart", ingr4.split(", "), tags4.split(", "), 4, 40, instr4);
+        //Meal ml4 = new Meal("Brocolli-aardappeltaart", ingr4.split(", "), tags4.split(", "), 4, 40, instr4);
 
-        Meal[] meals = new Meal[4];
-        meals[0] = ml1;
-        meals[1] = ml2;
-        meals[2] = ml3;
-        meals[3] = ml4;
+        //Meal[] meals = new Meal[4];
+        //meals[0] = ml1;
+        //meals[1] = ml2;
+        //meals[2] = ml3;
+        //meals[3] = ml4;
 
-        return meals;
+        //return meals;
+        return null;
     }
 }

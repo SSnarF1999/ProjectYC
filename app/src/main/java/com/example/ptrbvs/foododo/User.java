@@ -6,9 +6,10 @@ public class User {
 
     private String name;
     private String password;
-    private ArrayList<String> tags = new ArrayList();
+    private Boolean present;
+    private ArrayList<Tag> tags;
 
-    public User(String name, String password, ArrayList<String> tags) {
+    public User(String name, String password, ArrayList<Tag> tags) {
         this.name = name;
         this.password = password;
         this.tags = tags;
@@ -30,12 +31,21 @@ public class User {
         this.password = password;
     }
 
-    public ArrayList<String> getTags() {
+
+    public ArrayList<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(ArrayList<String> tags) {
+    public void setTags(ArrayList<Tag> tags) {
         this.tags = tags;
+    }
+
+    public Boolean getPresent() {
+        return present;
+    }
+
+    public void setPresent(Boolean present) {
+        this.present = present;
     }
 }
 
