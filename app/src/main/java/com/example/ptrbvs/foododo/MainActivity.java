@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         ivJoy.setImageResource(imageRescource);
     }
 
-    
+
 
     @Override
      public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,12 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        User joy = (User)getIntent().getSerializableExtra("joy");
         switch (item.getItemId()){
             case R.id.action_account:
                 startActivity(new Intent(this, Account.class)) ;
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
+                intent1.putExtra("joy", joy);
                 this.startActivity(intent1);
                 return true;
         }

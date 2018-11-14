@@ -3,6 +3,7 @@ package com.example.ptrbvs.foododo;
 import java.util.ArrayList;
 
 public class userData {
+
     public User[] generateuserData(){
         String name = "tristan";
         String password = "drums";

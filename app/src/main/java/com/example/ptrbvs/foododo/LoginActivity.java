@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+
 public class LoginActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,12 +30,24 @@ public class LoginActivity extends AppCompatActivity {
         ImageButton ibFrans= (ImageButton) findViewById(R.id.ibFrans);
         ImageButton ibTristan= (ImageButton) findViewById(R.id.ibTristan);
         ImageButton ibJoy= (ImageButton) findViewById(R.id.ibJoy);
+        userData data = new userData();
+        User[] users = data.generateuserData();
+        final User tristan = users[0];
+        final User pieter = users[1];
+        final User joy = users[2];
+        final User frans = users[3];
+
+
+
+
 
         bPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
+                loginIntent.putExtra("pieter", pieter);
                 LoginActivity.this.startActivity(loginIntent);
+
             }
         });
 
@@ -41,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
+                loginIntent.putExtra("frans", frans);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -49,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
+                loginIntent.putExtra("tristan", tristan);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -57,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                loginIntent.putExtra("joy", joy);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -65,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
+                loginIntent.putExtra("pieter", pieter);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -73,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
+                loginIntent.putExtra("frans", frans);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -81,6 +100,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
+                loginIntent.putExtra("tristan", tristan);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -89,6 +109,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                loginIntent.putExtra("joy", joy);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });

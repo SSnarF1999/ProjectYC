@@ -32,12 +32,14 @@ public class FransActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        User frans = (User)getIntent().getSerializableExtra("frans");
         switch (item.getItemId()){
             case R.id.action_account:
                 startActivity(new Intent(this, Account.class)) ;
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
+                intent1.putExtra("frans",frans);
                 this.startActivity(intent1);
                 return true;
         }
