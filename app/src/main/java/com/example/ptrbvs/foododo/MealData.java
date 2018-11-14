@@ -1,6 +1,6 @@
 package com.example.ptrbvs.foododo;
 
-public class mealData {
+public class MealData {
 
     public Meal[] generateMeals() {
         //Pasta met rode saus
@@ -34,7 +34,7 @@ public class mealData {
                 " zout en peper toe. Giet de pasta af en serveer de saus en de pasta en de kaas apart.\n";
         //*haalt adem*
 
-        //Meal ml1 =  new Meal("Pasta m. rode saus", ingr1.split(", "), tags1.split(", "), 4, 20, instr1);
+        Meal ml1 =  new Meal("Pasta m. rode saus", ingr1.split(", "), tags1.split(", "), 4, 20, instr1);
 
 
         //Zuurkool
@@ -59,7 +59,7 @@ public class mealData {
                 "zuurkool grof. Voeg de melk toe en wat kookvocht. Schep de appel en boter erbij en" +
                 " serveer met de worst.";
 
-        //Meal ml2 =  new Meal("Pasta m. rode saus", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
+        Meal ml2 =  new Meal("Pasta m. rode saus", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
 
 
         //Pizza Calzone
@@ -101,7 +101,7 @@ public class mealData {
                 " Leg de pizza's op een met bakpapier beklede bakplaat. Bak net onder het midden " +
                 "van de oven in ca. 15 min. goudbruin.\n";
 
-        //Meal ml3 = new Meal("Pizza Calzone", ingr3.split(", "), tags3.split(", "), 4, 30, instr3);
+        Meal ml3 = new Meal("Pizza Calzone", ingr3.split(", "), tags3.split(", "), 4, 30, instr3);
 
         //Brocolli-aardappeltaart
         String ingr4 = " 700 g broccoli," +
@@ -129,13 +129,13 @@ public class mealData {
                 "Neem de taart uit de oven en laat 5 min. staan. Maak ondertussen de slamelange " +
                 "aan met de dressing. Snijd de taart in punten en serveer met de salade.\n";
 
-        //Meal ml4 = new Meal("Brocolli-aardappeltaart", ingr4.split(", "), tags4.split(", "), 4, 40, instr4);
+        Meal ml4 = new Meal("Brocolli-aardappeltaart", ingr4.split(", "), tags4.split(", "), 4, 40, instr4);
 
-        //Meal[] meals = new Meal[4];
-        //meals[0] = ml1;
-        //meals[1] = ml2;
-        //meals[2] = ml3;
-        //meals[3] = ml4;
+        Meal[] meals = new Meal[4];
+        meals[0] = ml1;
+        meals[1] = ml2;
+        meals[2] = ml3;
+        meals[3] = ml4;
 
         //return meals;
         return null;

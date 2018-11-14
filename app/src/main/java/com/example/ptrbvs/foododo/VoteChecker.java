@@ -2,7 +2,6 @@ package com.example.ptrbvs.foododo;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class VoteChecker {
 

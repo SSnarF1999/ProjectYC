@@ -1,25 +1,19 @@
 package com.example.ptrbvs.foododo;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.view.Menu;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
     userData userdata = new userData();
     User[] users = userdata.generateuserData();
 
-    mealData mealdata = new mealData();
+    MealData mealdata = new MealData();
     Meal[] meals = mealdata.generateMeals();
 
 
