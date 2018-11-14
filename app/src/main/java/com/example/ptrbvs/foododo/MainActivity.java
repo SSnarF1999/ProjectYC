@@ -29,13 +29,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-=======
 
         ImageView ivJoy = (ImageView) findViewById(R.id.ivJoy);
         int imageRescource = getResources().getIdentifier("@drawable/pokemon", null, this.getPackageName());
         ivJoy.setImageResource(imageRescource);
->>>>>>> JoyNew2.0
     }
 
     
