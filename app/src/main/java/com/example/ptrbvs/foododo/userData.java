@@ -3,6 +3,16 @@ package com.example.ptrbvs.foododo;
 import java.util.ArrayList;
 
 public class userData {
+    private User[] gebruikers = new User[4];
+
+    public User[] getGebruikers() {
+        return gebruikers;
+    }
+
+    public void setGebruikers(User[] gebruikers) {
+        this.gebruikers = gebruikers;
+    }
+
     public User[] generateuserData(){
         String name = "tristan";
         String password = "drums";
@@ -28,6 +38,8 @@ public class userData {
         users[1] = user2;
         users[2] = user3;
         users[3] = user4;
+        userData data = new userData();
+        data.setGebruikers(users);
         return users;
 
     }
