@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ivJoy.setImageResource(imageRescource);
     }
 
-    
+
 
     @Override
      public boolean onCreateOptionsMenu(Menu menu) {

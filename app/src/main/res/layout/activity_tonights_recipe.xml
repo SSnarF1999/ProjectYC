@@ -9,122 +9,52 @@
     tools:context=".Tonights_recipeActivity"
     tools:layout_editor_absoluteY="25dp">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="142dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="67dp"
-        android:background="@android:color/white"
-        android:text="@string/are_you_at_diner"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="143dp"
-        android:background="@android:color/white"
-        android:buttonTint="@android:color/black"
-        android:focusable="auto"
-        android:lines="@android:integer/config_longAnimTime"
-        android:orientation="horizontal"
-        android:outlineAmbientShadowColor="@color/colorAccent"
-        android:outlineProvider="bounds"
-        android:outlineSpotShadowColor="@color/colorAccent"
-        android:shadowDx="100"
-        android:shadowDy="100"
-        android:text="@string/availible_tongiht"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:text="@string/maybe"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:text="@string/not_availible"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="182dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:background="@android:color/white"
-        android:text="@string/choose_recipe01"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="195dp"
-        android:layout_height="190dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="368dp"
+        android:layout_height="377dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="88dp"
-            android:layout_height="89dp"
-            android:background="@android:color/white"
-            app:layout_column="1"
-            app:layout_row="1"
-            app:srcCompat="@mipmap/ic_launcher"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="405dp" />
+            android:id="@+id/ibRecipe01"
+            android:layout_width="188dp"
+            android:layout_height="188dp"
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="89dp"
-            android:layout_height="89dp"
-            android:background="@android:color/white"
+            android:id="@+id/ibRecipe02"
+            android:layout_width="188dp"
+            android:layout_height="188dp"
             app:layout_column="1"
             app:layout_row="0"
-            app:srcCompat="@mipmap/ic_launcher_round"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="300dp" />
+            app:srcCompat="@mipmap/ic_eat" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="92dp"
-            android:layout_height="90dp"
-            android:background="@android:color/white"
+            android:id="@+id/ibRecipe03"
+            android:layout_width="188dp"
+            android:layout_height="188dp"
             app:layout_column="0"
             app:layout_row="1"
-            app:srcCompat="@mipmap/ic_launcher_round"
-            tools:layout_editor_absoluteX="214dp"
-            tools:layout_editor_absoluteY="297dp" />
+            app:srcCompat="@mipmap/ic_eat" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="92dp"
-            android:layout_height="89dp"
-            android:background="@android:color/white"
-            app:layout_column="0"
-            app:layout_row="0"
-            app:srcCompat="@mipmap/ic_launcher"
-            tools:layout_editor_absoluteX="69dp"
-            tools:layout_editor_absoluteY="262dp" />
+            android:id="@+id/ibRecipe04"
+            android:layout_width="188dp"
+            android:layout_height="188dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@mipmap/ic_eat" />
     </android.support.v7.widget.GridLayout>
 
+    <Button
+        android:id="@+id/bNoDinner"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Not availible tonight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 </android.support.constraint.ConstraintLayout>
