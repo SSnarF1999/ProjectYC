@@ -34,6 +34,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivRecipe">
 
@@ -48,16 +49,21 @@
         android:id="@+id/tvIngredients"
         android:layout_width="352dp"
         android:layout_height="118dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="320dp"
         android:text="Ingredients"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="316dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <MultiAutoCompleteTextView
         android:id="@+id/tvMakingRecipe"
         android:layout_width="352dp"
         android:layout_height="195dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:text="How to make"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="444dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngredients" />
 
 </android.support.constraint.ConstraintLayout>
