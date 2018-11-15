@@ -94,14 +94,16 @@
         <activity
             android:name=".PreferencesActivity"
             android:label="Pereferences"
-            android:parentActivityName=".Account"/>
+            android:parentActivityName=".Account" />
         <activity
             android:name=".MenuActivity"
             android:label="MENU"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".PieterActivity"/>
-        <activity android:name=".FransActivity"/>
-        <activity android:name=".TristanActivity"/>
+        <activity
+            android:name=".PieterActivity"
+            android:label="Welcome Pieter" />
+        <activity android:name=".FransActivity" />
+        <activity android:name=".TristanActivity" />
     </application>
 
 </manifest>
