@@ -1,8 +1,10 @@
 package com.example.ptrbvs.foododo;
 
+import java.util.ArrayList;
+
 public class MealData {
 
-    public Meal[] generateMeals() {
+    public ArrayList<Meal> generateMeals() {
         //Pasta met rode saus
         String ingr1 = "400g rundergehakt," +
                 " 2 uien, gesnipperd," +
@@ -131,11 +133,11 @@ public class MealData {
 
         Meal ml4 = new Meal("Brocolli-aardappeltaart", ingr4.split(", "), tags4.split(", "), 4, 40, instr4);
 
-        Meal[] meals = new Meal[4];
-        meals[0] = ml1;
-        meals[1] = ml2;
-        meals[2] = ml3;
-        meals[3] = ml4;
+        ArrayList<Meal> meals = new ArrayList();
+        meals.add(ml1);
+        meals.add(ml2);
+        meals.add(ml3);
+        meals.add(ml4);
 
         return meals;
     }

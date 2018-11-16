@@ -2,15 +2,17 @@ package com.example.ptrbvs.foododo;
 
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class ActiveUserCommunicator extends AppCompatActivity {
 
-    protected User[] createUsersSample() {
-        userData data = new userData();
-        return data.generateUserData();
+    protected ArrayList<User> createUsersSample() {
+        UserData data = new UserData();
+        return data.LoadUserData();
     }
     protected String getImgLocation (String username) throws Exception {
         String locname = "";
-        User[] users = createUsersSample();
+        ArrayList<User> users = createUsersSample();
         for (User user : users) {
             if (user.getName().equals(username)) {
                 locname = user.getProfilePic();

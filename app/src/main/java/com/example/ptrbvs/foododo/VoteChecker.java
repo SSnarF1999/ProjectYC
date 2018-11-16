@@ -5,8 +5,11 @@ import java.util.Collections;
 
 public class VoteChecker {
 
+    MealData mealData = new MealData();
+
     protected Group group;
     protected ArrayList<Tag> groupTags = new ArrayList();
+    ArrayList<Meal> mealList = mealData.generateMeals();
 
     protected void pullGroup(Group group) {
         this.group = group;
@@ -22,8 +25,7 @@ public class VoteChecker {
                 //set absent
                 user.setPresent(false);
                 newUserList.add(user);
-            }
-            else {
+            } else {
                 newUserList.add(user);
             }
         }
@@ -31,8 +33,16 @@ public class VoteChecker {
         this.group.setUsers(newUserList);
     }
 
+    protected void vote(Meal votedMeal) {
+        for (Meal meal : mealList) {
+            if (votedMeal == meal) {
+                meal.setScore(meal.getScore() + 1);
+            }
+        }
+    }
+
     protected void findMatches(Group group) {
-        ArrayList<Tag> similairTags =  new ArrayList();
+        ArrayList<Tag> similairTags = new ArrayList();
 
         for (User user : group.getUsers()) {
 
@@ -44,7 +54,7 @@ public class VoteChecker {
                     for (User comparedUser : group.getUsers()) {
 
                         //if user is not the same and user is present
-                        if (user != comparedUser && comparedUser.getPresent() ) {
+                        if (user != comparedUser && comparedUser.getPresent()) {
                             ArrayList<Tag> comparedUserTags = comparedUser.getTags();
 
                             //find similair tags
@@ -60,8 +70,7 @@ public class VoteChecker {
                                             increment.setScore(increment.getScore() + 1);
                                         }
                                     }
-                                }
-                                else {
+                                } else {
                                     similairTags.add(userTag);
                                 }
                             }
@@ -75,5 +84,5 @@ public class VoteChecker {
     }
     //wollah tantoe veel parentheses.
     //ik ben hier dus trots op.
-}
 
+}

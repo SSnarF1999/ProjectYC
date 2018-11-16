@@ -2,9 +2,9 @@ package com.example.ptrbvs.foododo;
 
 import java.util.ArrayList;
 
-public class userData {
+public class UserData {
 
-    public User[] generateUserData(){
+    public ArrayList<User> LoadUserData(){
         String name = "tristan";
         String password = "drums";
         ArrayList<Tag> tags = new ArrayList();
@@ -33,11 +33,11 @@ public class userData {
 
         User user4 = new User(name4, password4, tags4, profilepic4);
 
-        User[] users = new User[4];
-        users[0] = user1;
-        users[1] = user2;
-        users[2] = user3;
-        users[3] = user4;
+        ArrayList<User> users = new ArrayList();
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
+        users.add(user4);
 
         return users;
 

@@ -10,6 +10,7 @@ public class Meal {
     private int persons;
     private int time;
     private String instructions;
+    private int score;
     private static ArrayList<Meal> Meals = new ArrayList();
 
     public Meal() {}
@@ -124,6 +125,14 @@ public class Meal {
 
     public void setInstructions(String instructions) {
         this.instructions = instructions;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }
 
