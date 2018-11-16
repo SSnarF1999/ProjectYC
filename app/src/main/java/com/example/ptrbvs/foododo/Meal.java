@@ -9,11 +9,21 @@ public class Meal {
     private String[] tags;
     private int persons;
     private int time;
+    private String instructions;
     private static ArrayList<Meal> Meals = new ArrayList();
 
     public Meal() {}
 
-    private String listPrinter( String[] in) {
+    public Meal(String name, String[] ingredients, String[] tags, int persons, int time, String instructions) {
+        this.name = name;
+        this.ingredients = ingredients;
+        this.tags = tags;
+        this.persons = persons;
+        this.time = time;
+        this.instructions = instructions;
+    }
+
+    private String listPrinter(String[] in) {
         String out = "";
         for (String str : in) {
             out = out + ", " + str;
@@ -23,11 +33,25 @@ public class Meal {
 
     public String toString() {
         return
-                        this.name           + ":"                               +
+                this.name           + ":"                               +
                         " Ingredients: "    + listPrinter(this.ingredients)     +
                         " Tags: "           + listPrinter(this.tags)            +
                         " Persons: "        + Integer.toString(this.persons)    +
                         " Time: "           + this.time;
+    }
+
+    public void recalculate(int personsNum) {
+        float factor = personsNum / this.persons;
+
+        for (String ingredient : this.ingredients) {
+            for (char cha : ingredient.toCharArray()) {
+                if (Character.isDigit(cha)) {
+                    float old = Character.getNumericValue(cha);
+                    char nw = (char)(old * factor);
+                    cha = nw;
+                }
+            }
+        }
     }
 
     //Setters of arrays throw Exception for SQL safety (max size)
@@ -94,8 +118,11 @@ public class Meal {
         Meals = meals;
     }
 
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
 }
-
-
-
-
