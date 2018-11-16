@@ -39,7 +39,7 @@ public class TristanActivity extends AppCompatActivity {
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("tristan", tristan );
+                intent1.putExtra("account", tristan );
                 this.startActivity(intent1);
                 return true;
         }

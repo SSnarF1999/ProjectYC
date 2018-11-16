@@ -14,7 +14,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
+        final User loggedUser = (User)getIntent().getSerializableExtra("account");
         final Button bAccount = (Button) findViewById(R.id.bAccount);
         final Button bFriends = (Button) findViewById(R.id.bFriends);
         final Button bGroups = (Button) findViewById(R.id.bGroups);
@@ -24,7 +24,9 @@ public class MenuActivity extends AppCompatActivity {
         bAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent registerIntent = new Intent(MenuActivity.this, Account.class);
+                registerIntent.putExtra("account",loggedUser);
                 MenuActivity.this.startActivity(registerIntent);
             }
         });

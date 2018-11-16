@@ -39,7 +39,7 @@ public class FransActivity extends AppCompatActivity {
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("frans",frans);
+                intent1.putExtra("account",frans);
                 this.startActivity(intent1);
                 return true;
         }

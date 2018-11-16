@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("joy", joy);
+                intent1.putExtra("account", joy);
                 this.startActivity(intent1);
                 return true;
         }

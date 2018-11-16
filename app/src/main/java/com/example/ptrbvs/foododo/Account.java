@@ -11,14 +11,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Account extends AppCompatActivity {
 
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        User loggedUser = (User)getIntent().getSerializableExtra("account");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        final TextView tname = (TextView) findViewById(R.id.editText);
+        tname.setText(loggedUser.getName());
 
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 

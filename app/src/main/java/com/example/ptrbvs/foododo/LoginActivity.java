@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         ImageButton ibTristan= (ImageButton) findViewById(R.id.ibTristan);
         ImageButton ibJoy= (ImageButton) findViewById(R.id.ibJoy);
         userData data = new userData();
-        User[] users = data.generateuserData();
+        final User[] users = data.generateuserData();
         final User tristan = users[0];
         final User pieter = users[1];
         final User joy = users[2];
@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
                 loginIntent.putExtra("frans", frans);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });

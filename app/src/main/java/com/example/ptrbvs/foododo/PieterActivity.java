@@ -40,7 +40,7 @@ public class PieterActivity extends AppCompatActivity {
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("pieter", pieter);
+                intent1.putExtra("account", pieter);
                 this.startActivity(intent1);
                 return true;
         }
