@@ -18,12 +18,15 @@ public class GroupChosenActivitiy extends AppCompatActivity {
         final Button bChoose = (Button) findViewById(R.id.bChoose);
         final ImageButton ibDiner = (ImageButton) findViewById(R.id.ibDiner);
         final Button bUsers = (Button) findViewById(R.id.bUsers);
+        final User loggedUser = (User)getIntent().getSerializableExtra("account");
 
         bChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent homeIntent = new Intent(GroupChosenActivitiy.this, Tonights_recipeActivity.class);
+                homeIntent.putExtra("account",loggedUser);
                 GroupChosenActivitiy.this.startActivity(homeIntent);
+
             }
         });
 

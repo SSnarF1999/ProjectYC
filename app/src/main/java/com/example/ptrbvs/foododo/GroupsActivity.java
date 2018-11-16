@@ -19,11 +19,13 @@ public class GroupsActivity extends AppCompatActivity {
 
         final Button bGroup01 = (Button) findViewById(R.id.bGroup01);
         final Button bGroup02 = (Button) findViewById(R.id.bGroup2);
+        final User loggedUser = (User)getIntent().getSerializableExtra("account");
 
         bGroup01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent registerIntent = new Intent(GroupsActivity.this, GroupChosenActivitiy.class);
+                registerIntent.putExtra("account",loggedUser);
                 GroupsActivity.this.startActivity(registerIntent);
             }
         });

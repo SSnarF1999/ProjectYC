@@ -15,11 +15,13 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         final User loggedUser = (User)getIntent().getSerializableExtra("account");
+        final User[] friends = (User[])getIntent().getSerializableExtra("friends");
         final Button bAccount = (Button) findViewById(R.id.bAccount);
         final Button bFriends = (Button) findViewById(R.id.bFriends);
         final Button bGroups = (Button) findViewById(R.id.bGroups);
         final Button bRecipe = (Button) findViewById(R.id.bRecipe);
         final Button bSwitch = (Button) findViewById(R.id.bSwitch);
+
 
         bAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent registerIntent = new Intent(MenuActivity.this, FriendsActivitiy.class);
+                registerIntent.putExtra("loggedUser",loggedUser);
+                registerIntent.putExtra("friends",friends);
                 MenuActivity.this.startActivity(registerIntent);
             }
         });

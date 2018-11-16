@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
                 loginIntent.putExtra("pieter", pieter);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
 
             }
@@ -66,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
                 loginIntent.putExtra("tristan", tristan);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -75,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
                 loginIntent.putExtra("joy", joy);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -84,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
                 loginIntent.putExtra("pieter", pieter);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -93,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
                 loginIntent.putExtra("frans", frans);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -102,6 +107,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
                 loginIntent.putExtra("tristan", tristan);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });
@@ -111,6 +117,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
                 loginIntent.putExtra("joy", joy);
+                loginIntent.putExtra("friends",users);
                 LoginActivity.this.startActivity(loginIntent);
             }
         });

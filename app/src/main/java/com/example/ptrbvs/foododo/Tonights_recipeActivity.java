@@ -8,6 +8,8 @@ public class Tonights_recipeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final User loggedUser = (User)getIntent().getSerializableExtra("account");
         setContentView(R.layout.activity_tonights_recipe);
+
     }
 }
