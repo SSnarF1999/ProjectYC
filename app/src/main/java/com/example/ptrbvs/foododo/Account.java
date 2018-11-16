@@ -43,9 +43,6 @@ public class Account extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.action_account:
-                startActivity(new Intent(this, Account.class)) ;
-                return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
                 this.startActivity(intent1);

@@ -5,10 +5,6 @@
     tools:ignore="@style/Widget.AppCompat.PopupMenu">
 
     <item
-        android:id="@+id/action_account"
-        android:title="@string/account1"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/action_menu"
         android:title="Menu"
         app:showAsAction="ifRoom" />
