@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class Account extends AppCompatActivity {
+public class Account extends ActiveUserCommunicator {
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -23,7 +23,14 @@ public class Account extends AppCompatActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         final Button bPreferences = (Button) findViewById(R.id.bPreferences);
-
+        final ImageView ivProfile = (ImageView) findViewById(R.id.ivProfile);
+        try {
+            int imageRescource = getResources().getIdentifier(getImgLocation(ActiveUser.getName()), "drawable", Account.this.getPackageName());
+            ivProfile.setImageResource(imageRescource);
+        }
+        catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
 
         bPreferences.setOnClickListener(new View.OnClickListener() {
             @Override

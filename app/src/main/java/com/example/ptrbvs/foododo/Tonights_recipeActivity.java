@@ -19,5 +19,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
         final ImageButton ibRecipe02 = (ImageButton) findViewById(R.id.ibRecipe02);
         final ImageButton ibRecipe03 = (ImageButton) findViewById(R.id.ibRecipe03);
         final ImageButton ibRecipe04 = (ImageButton) findViewById(R.id.ibRecipe04);
+
+
     }
 }

@@ -1,35 +1,33 @@
 package com.example.ptrbvs.foododo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.view.Menu;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-
-    userData userdata = new userData();
-    User[] users = userdata.generateuserData();
-
-    MealData mealdata = new MealData();
-    Meal[] meals = mealdata.generateMeals();
-
-
-
+public class UserActivity extends ActiveUserCommunicator {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_user);
 
-        ImageView ivJoy = (ImageView) findViewById(R.id.ivJoy);
-        int imageRescource = getResources().getIdentifier("@drawable/pokemon", null, this.getPackageName());
-        ivJoy.setImageResource(imageRescource);
+        ImageView ivUser = (ImageView) findViewById(R.id.ivUser);
+        TextView tvUsername = (TextView) findViewById(R.id.tvUserName);
+
+        try {
+            int imageRescource = getResources().getIdentifier(getImgLocation(ActiveUser.getName()), "drawable", UserActivity.this.getPackageName());
+            ivUser.setImageResource(imageRescource);
+            tvUsername.setText(ActiveUser.getName());
+        }
+        catch (Exception e) {
+            System.out.print(e.getMessage());
+            tvUsername.setText("could not find name");
+        }
     }
-
-
 
     @Override
      public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,17 +37,14 @@ public class MainActivity extends AppCompatActivity {
      }
 
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        User joy = (User)getIntent().getSerializableExtra("joy");
         switch (item.getItemId()){
             case R.id.action_account:
                 startActivity(new Intent(this, Account.class)) ;
                 return true;
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("joy", joy);
                 this.startActivity(intent1);
                 return true;
         }

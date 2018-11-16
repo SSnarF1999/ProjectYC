@@ -137,7 +137,6 @@ public class MealData {
         meals[2] = ml3;
         meals[3] = ml4;
 
-        //return meals;
-        return null;
+        return meals;
     }
 }

@@ -7,18 +7,18 @@ public class User implements Serializable {
 
     private String name;
     private String password;
-    private Boolean present;
+    private Boolean present = true;
     private ArrayList<Tag> tags;
+    private String profilePic;
 
-    public User(String name, String password, ArrayList<Tag> tags) {
+    public User(String name, String password, ArrayList<Tag> tags, String profilePic) {
         this.name = name;
         this.password = password;
         this.tags = tags;
+        this.profilePic = profilePic;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -47,6 +47,14 @@ public class User implements Serializable {
 
     public void setPresent(Boolean present) {
         this.present = present;
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
 }
 
