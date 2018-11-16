@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="@android:color/white"
     tools:context=".FriendsActivitiy">
 
     <Button
@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:text="@string/friend_03"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend2" />
 
@@ -24,8 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:text="@string/friend_03"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend" />
 
@@ -35,8 +37,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:text="@string/friend_03"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend03" />
 
@@ -46,8 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:text="@string/friend_01"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,8 +61,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:text="@string/friend_02"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend01" />
 
@@ -68,8 +73,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="14dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:text="@string/friend_03"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend02" />
 </android.support.constraint.ConstraintLayout>
