@@ -26,16 +26,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="Welkom"
-            android:parentActivityName=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".RegisterActivity">
@@ -97,11 +87,10 @@
             android:parentActivityName=".Account"/>
         <activity
             android:name=".MenuActivity"
+            android:label="MENU" />
+        <activity
+            android:name=".UserActivity"
             android:label="MENU"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".PieterActivity"/>
-        <activity android:name=".FransActivity"/>
-        <activity android:name=".TristanActivity"/>
+            android:parentActivityName=".LoginActivity" />
     </application>
-
 </manifest>

@@ -9,9 +9,9 @@ public class VoteChecker {
 
     protected Group group;
     protected ArrayList<Tag> groupTags = new ArrayList();
-    ArrayList<Meal> mealList = mealData.generateMeals();
+    ArrayList<Meal> mealList = mealData.loadMeals();
 
-    protected void pullGroup(Group group) {
+    public VoteChecker(Group group) {
         this.group = group;
     }
 
@@ -34,14 +34,15 @@ public class VoteChecker {
     }
 
     protected void vote(Meal votedMeal) {
+        //if () { if user has not already voted for this item
         for (Meal meal : mealList) {
-            if (votedMeal == meal) {
+            if (votedMeal.getName().equals(meal.getName())) {
                 meal.setScore(meal.getScore() + 1);
             }
         }
     }
 
-    protected void findMatches(Group group) {
+    protected void findMatches() {
         ArrayList<Tag> similairTags = new ArrayList();
 
         for (User user : group.getUsers()) {
@@ -55,7 +56,6 @@ public class VoteChecker {
 
                         //if user is not the same and user is present
                         if (user != comparedUser && comparedUser.getPresent()) {
-                            ArrayList<Tag> comparedUserTags = comparedUser.getTags();
 
                             //find similair tags
                             for (Tag userTag : userTags) {

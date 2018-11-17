@@ -29,4 +29,5 @@ public class ActiveUser {
     public static void setName(String name) {
         ActiveUser.name = name;
     }
+
 }

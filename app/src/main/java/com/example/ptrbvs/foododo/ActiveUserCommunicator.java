@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class ActiveUserCommunicator extends AppCompatActivity {
+public abstract class ActiveUserCommunicator extends AppCompatActivity {
 
     protected ArrayList<User> createUsersSample() {
         UserData data = new UserData();

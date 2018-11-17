@@ -1,10 +1,12 @@
 package com.example.ptrbvs.foododo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MealData {
+public class MealData implements Serializable {
 
-    public ArrayList<Meal> generateMeals() {
+    public ArrayList<Meal> loadMeals() {
+
         //Pasta met rode saus
         String ingr1 = "400g rundergehakt," +
                 " 2 uien, gesnipperd," +

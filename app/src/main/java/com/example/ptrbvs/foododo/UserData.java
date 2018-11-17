@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class UserData {
 
+    public UserData() { }
+
     public ArrayList<User> LoadUserData(){
         String name = "tristan";
         String password = "drums";

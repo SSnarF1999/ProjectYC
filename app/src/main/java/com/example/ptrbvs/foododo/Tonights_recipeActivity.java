@@ -6,23 +6,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+
 public class Tonights_recipeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        MealData mealdata = new MealData();
-        final VoteChecker votechecker = new VoteChecker();
-        Group activeGroup = new Group();
-        UserData userdata = new UserData();
-
-        //Load userdata
-        activeGroup.setUsers(userdata.LoadUserData());
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tonights_recipe);
 
-        mealdata.generateMeals();
+
 
         final ImageButton ibRecipe01 = (ImageButton) findViewById(R.id.ibRecipe01);
         final ImageButton ibRecipe02 = (ImageButton) findViewById(R.id.ibRecipe02);
@@ -34,35 +28,50 @@ public class Tonights_recipeActivity extends AppCompatActivity {
         ibRecipe01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               //votechecker.vote(geef verbonden recept mee);
+                final VoteChecker votechecker = new VoteChecker();
+                MealData mealdata = new MealData();
+                ArrayList<Meal> meal = mealdata.loadMeals();
+                votechecker.vote(meal.get(0));
             }
         });
 
         ibRecipe02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //votechecker.vote(geef verbonden recept mee);
+                final VoteChecker votechecker = new VoteChecker();
+                MealData mealdata = new MealData();
+                ArrayList<Meal> meal = mealdata.loadMeals();
+                votechecker.vote(meal.get(1));
             }
         });
 
         ibRecipe03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //votechecker.vote() geef verbonden recept mee);
+                final VoteChecker votechecker = new VoteChecker();
+                MealData mealdata = new MealData();
+                ArrayList<Meal> meal = mealdata.loadMeals();
+                votechecker.vote(meal.get(2));
             }
         });
 
         ibRecipe04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //votechecker.vote(geef verbonden recept mee);
+                final VoteChecker votechecker = new VoteChecker();
+                MealData mealdata = new MealData();
+                ArrayList<Meal> meal = mealdata.loadMeals();
+                votechecker.vote(meal.get(3));
             }
         });
 
         bAbsent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //votechecker.vote(geef verbonden recept mee);
+                final VoteChecker votechecker = new VoteChecker();
+                MealData mealdata = new MealData();
+                ArrayList<Meal> meal = mealdata.loadMeals();
+                votechecker.vote(meal.get(4));
             }
         });
 
