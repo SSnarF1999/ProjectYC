@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         bPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
 
                 Singleton.getInstance().setActiveUser(pieter);
                 LoginActivity.this.startActivity(loginIntent);
@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         bFrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
 
                 Singleton.getInstance().setActiveUser(frans);
                 LoginActivity.this.startActivity(loginIntent);
@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         bTristan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
 
                 Singleton.getInstance().setActiveUser(tristan);
                 LoginActivity.this.startActivity(loginIntent);
@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         ibPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
 
                 Singleton.getInstance().setActiveUser(pieter);
                 LoginActivity.this.startActivity(loginIntent);
@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
         ibFrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
 
                 Singleton.getInstance().setActiveUser(frans);
                 LoginActivity.this.startActivity(loginIntent);
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
         ibTristan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
 
                 Singleton.getInstance().setActiveUser(tristan);
                 LoginActivity.this.startActivity(loginIntent);

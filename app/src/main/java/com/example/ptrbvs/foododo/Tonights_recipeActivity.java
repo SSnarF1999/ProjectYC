@@ -19,11 +19,21 @@ public class Tonights_recipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tonights_recipe);
 
         final ArrayList<Meal> meal = Singleton.getInstance().getMeals();
-
+        int imageRescource1 = getResources().getIdentifier("@drawable/pasta02", null, this.getPackageName());
+        int imageRescource2 = getResources().getIdentifier("@drawable/zuur", null, this.getPackageName());
+        int imageRescource3 = getResources().getIdentifier("@drawable/pizza3", null, this.getPackageName());
+        int imageRescource4 = getResources().getIdentifier("@drawable/broc", null, this.getPackageName());
         final ImageButton ibRecipe01 = (ImageButton) findViewById(R.id.ibRecipe01);
         final ImageButton ibRecipe02 = (ImageButton) findViewById(R.id.ibRecipe02);
         final ImageButton ibRecipe03 = (ImageButton) findViewById(R.id.ibRecipe03);
         final ImageButton ibRecipe04 = (ImageButton) findViewById(R.id.ibRecipe04);
+        ibRecipe01.setImageResource(imageRescource1);
+        ibRecipe02.setImageResource(imageRescource2);
+        ibRecipe03.setImageResource(imageRescource3);
+        ibRecipe04.setImageResource(imageRescource4);
+
+
+
 
         final TextView tScore01 = (TextView) findViewById(R.id.tScore01);
         final TextView tScore02 = (TextView) findViewById(R.id.tScore02);
@@ -57,7 +67,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                         tCantvotemsg.setText("You can't vote if you won't attend the meal.");
                     }
                     else {
-                        votechecker.vote(meal, meal.get(0));
+                        votechecker.vote(meal, meal.get(0),true);
                     }
                 }
             }
@@ -71,7 +81,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe02) {
                     final VoteChecker votechecker = new VoteChecker(Singleton.getInstance().getGroup());
                     ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(1));
+                    votechecker.vote(meal, meal.get(1),true);
                     tScore02.setText(Integer.toString(meal.get(1).getScore()));
                     tCantvotemsg.setText("");
                     s.setActiveVote(ibRecipe02);
@@ -90,7 +100,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe03) {
                     final VoteChecker votechecker = new VoteChecker(s.getGroup());
                     ArrayList<Meal> meal = Singleton.getInstance().getMeals();
-                    votechecker.vote(meal, meal.get(2));
+                    votechecker.vote(meal, meal.get(2),true);
                     tScore03.setText(Integer.toString(meal.get(2).getScore()));
                     tCantvotemsg.setText("");
                     s.setActiveVote(ibRecipe03);
@@ -109,7 +119,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe04) {
                     final VoteChecker votechecker = new VoteChecker(s.getGroup());
                     ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(3));
+                    votechecker.vote(meal, meal.get(3),true);
                     tScore04.setText(Integer.toString(meal.get(3).getScore()));
                     tCantvotemsg.setText("");
                     s.setActiveVote(ibRecipe04);

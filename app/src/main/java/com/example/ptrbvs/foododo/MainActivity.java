@@ -25,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView user = (TextView) findViewById(R.id.textView4);
+        user.setText(Singleton.getInstance().getActiveUser().getName());
 
-        ImageView ivJoy = (ImageView) findViewById(R.id.ivJoy);
-        int imageRescource = getResources().getIdentifier("@drawable/pokemon", null, this.getPackageName());
-        ivJoy.setImageResource(imageRescource);
+        ImageView ivActiveUser = (ImageView) findViewById(R.id.ivJoy);
+        int imageRescource = getResources().getIdentifier(Singleton.getInstance().getActiveUser().getProfilePic(), null, this.getPackageName());
+        ivActiveUser.setImageResource(imageRescource);
     }
 
 
