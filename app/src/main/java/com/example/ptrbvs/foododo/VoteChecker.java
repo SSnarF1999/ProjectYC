@@ -74,6 +74,10 @@ public class VoteChecker {
             Collections.sort(similairTags, new TagComparator());
             this.groupTags = similairTags;
     }
-        //wollah tantoe veel parentheses.
-        //ik ben hier dus trots op.
+
+    public Meal getBest() {
+        Collections.sort(Singleton.getInstance().getMeals(), new MealComparator());
+        return Singleton.getInstance().getMeals().get(0);
+    }
+
 }
