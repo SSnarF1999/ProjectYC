@@ -19,9 +19,9 @@ public class UserActivity extends ActiveUserCommunicator {
         TextView tvUsername = (TextView) findViewById(R.id.tvUserName);
 
         try {
-            int imageRescource = getResources().getIdentifier(getImgLocation(ActiveUser.getName()), "drawable", UserActivity.this.getPackageName());
+            int imageRescource = getResources().getIdentifier(getImgLocation(Singleton.getInstance().getActiveUser().getName()), "drawable", UserActivity.this.getPackageName());
             ivUser.setImageResource(imageRescource);
-            tvUsername.setText(ActiveUser.getName());
+            tvUsername.setText(Singleton.getInstance().getActiveUser().getName());
         }
         catch (Exception e) {
             System.out.print(e.getMessage());

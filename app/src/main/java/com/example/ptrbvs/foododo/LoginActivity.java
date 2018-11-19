@@ -1,7 +1,6 @@
 package com.example.ptrbvs.foododo;
 
 import android.content.Intent;
-import android.service.autofill.UserData;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +17,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        UserData users = new UserData();
+        final Group group1 = new Group();
+        group1.setUsers(users.LoadUserData());
+        Singleton.getInstance().setGroup(group1);
+
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bPieter = (Button) findViewById(R.id.bPieter);
         final Button bFrans = (Button) findViewById(R.id.bFrans);
@@ -32,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         bPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("pieter");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(1));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -41,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         bFrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("frans");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(3));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -50,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         bTristan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("tristan");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(0));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -59,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         bJoy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("joy");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(2));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
 
@@ -69,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         ibPieter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("pieter");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(1));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -78,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         ibFrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("frans");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(3));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -87,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
         ibTristan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("tristan");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(0));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -96,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
         ibJoy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActiveUser.setName("joy");
+                Singleton.getInstance().setActiveUser(group1.getUsers().get(2));
                 Intent loginIntent = new Intent(LoginActivity.this, UserActivity.class);
                 LoginActivity.this.startActivity(loginIntent);
             }

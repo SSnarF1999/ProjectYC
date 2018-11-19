@@ -2,14 +2,12 @@ package com.example.ptrbvs.foododo;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class Account extends ActiveUserCommunicator {
@@ -25,7 +23,7 @@ public class Account extends ActiveUserCommunicator {
         final Button bPreferences = (Button) findViewById(R.id.bPreferences);
         final ImageView ivProfile = (ImageView) findViewById(R.id.ivProfile);
         try {
-            int imageRescource = getResources().getIdentifier(getImgLocation(ActiveUser.getName()), "drawable", Account.this.getPackageName());
+            int imageRescource = getResources().getIdentifier(getImgLocation(Singleton.getInstance().getActiveUser().getName()), "drawable", Account.this.getPackageName());
             ivProfile.setImageResource(imageRescource);
         }
         catch (Exception e) {
