@@ -8,6 +8,7 @@ public class User implements Serializable {
     private Boolean present = true;
     private ArrayList<Tag> tags;
     private String profilePic;
+    private boolean voted;
 
     public User(String name, String password, ArrayList<Tag> tags, String profilePic) {
         this.name = name;
@@ -53,5 +54,13 @@ public class User implements Serializable {
 
     public void setProfilePic(String profilePic) {
         this.profilePic = profilePic;
+    }
+
+    public boolean isVoted() {
+        return voted;
+    }
+
+    public void setVoted(boolean voted) {
+        this.voted = voted;
     }
 }

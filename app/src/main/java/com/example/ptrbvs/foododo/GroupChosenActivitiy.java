@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class GroupChosenActivitiy extends AppCompatActivity {
 
@@ -19,6 +20,14 @@ public class GroupChosenActivitiy extends AppCompatActivity {
         final ImageButton ibDiner = (ImageButton) findViewById(R.id.ibDiner);
         final Button bUsers = (Button) findViewById(R.id.bUsers);
         final User loggedUser = (User)getIntent().getSerializableExtra("account");
+        final TextView tWinningDinner = (TextView) findViewById(R.id.tWinningDinner);
+
+        try {
+            tWinningDinner.setText(Singleton.getInstance().getWinnerMeal().getName());
+        }
+        catch (Exception e){
+            tWinningDinner.setText("You need to vote first");
+        }
 
         bChoose.setOnClickListener(new View.OnClickListener() {
             @Override

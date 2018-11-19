@@ -44,10 +44,10 @@
 
     <ImageButton
         android:id="@+id/ibDiner"
-        android:layout_width="286dp"
-        android:layout_height="185dp"
+        android:layout_width="134dp"
+        android:layout_height="100dp"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="107dp"
+        android:layout_marginTop="224dp"
         android:layout_marginEnd="49dp"
         android:background="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,15 +58,26 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="117dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="114dp"
-        android:text="Tonights Diner"
+        android:layout_marginBottom="20dp"
+        android:text="Winning dinner"
         android:textColor="@android:color/black"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/ibDiner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tWinningDinner"
+        android:layout_width="135dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="124dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibDiner" />
 
 </android.support.constraint.ConstraintLayout>

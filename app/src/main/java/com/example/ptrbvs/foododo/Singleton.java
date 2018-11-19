@@ -13,7 +13,7 @@ public class Singleton {
     private Group group;
     private ArrayList<Meal> meals;
     private ImageButton activeVote;
-
+    private Meal winnerMeal;
 
     // private constructor restricted to this class itself
     private Singleton()
@@ -57,5 +57,13 @@ public class Singleton {
 
     public void setActiveVote(ImageButton activeVote) {
         this.activeVote = activeVote;
+    }
+
+    public Meal getWinnerMeal() {
+        return winnerMeal;
+    }
+
+    public void setWinnerMeal(Meal winnerMeal) {
+        this.winnerMeal = winnerMeal;
     }
 }
