@@ -33,7 +33,7 @@ public class GroupChosenActivitiy extends AppCompatActivity {
         ibDiner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(GroupChosenActivitiy.this, RecipeIngredientsActivity.class);
+                Intent homeIntent = new Intent(GroupChosenActivitiy.this, RecipeActivity.class);
                 GroupChosenActivitiy.this.startActivity(homeIntent);
             }
         });

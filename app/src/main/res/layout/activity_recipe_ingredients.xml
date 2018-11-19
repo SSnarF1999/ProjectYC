@@ -37,7 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
+        android:background="@android:color/black"
         android:text="Ingredients"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1_activity2" />
@@ -56,10 +58,8 @@
 
             <TextView
                 android:id="@+id/text2_activity2"
-                android:layout_width="354dp"
+                android:layout_width="384dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="12dp"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent" />
         </android.support.constraint.ConstraintLayout>
@@ -71,14 +71,17 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
+        android:background="@android:color/black"
         android:text="How to make"
-        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="137dp"
+        android:layout_height="126dp"
         android:layout_marginTop="188dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
@@ -92,7 +95,8 @@
                 android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
