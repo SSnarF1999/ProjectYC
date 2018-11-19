@@ -18,7 +18,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".LoginActivity"
-            android:label="@string/app_name">
+            android:label="FOODODO">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

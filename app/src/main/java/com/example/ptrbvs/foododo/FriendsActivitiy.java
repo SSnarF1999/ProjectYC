@@ -21,29 +21,28 @@ public class FriendsActivitiy extends AppCompatActivity {
         final Button bfriend0 = (Button) findViewById(R.id.bFriend0);
         final Button bfriend1 = (Button) findViewById(R.id.bFriend1);
         final Button bfriend2 = (Button) findViewById(R.id.bFriend2);
-        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
-
+        final Group friends = Singleton.getInstance().getGroup();
         ArrayList<User> vrienden = new ArrayList<>();
-        if (friends.get(0).getName().equals(Singleton.getInstance().getActiveUser().getName())) {
-            vrienden.add(friends.get(1));
-            vrienden.add(friends.get(2));
-            vrienden.add(friends.get(3));
+        if (friends.getUsers().get(0).getName().equals(Singleton.getInstance().getActiveUser().getName())) {
+            vrienden.add(friends.getUsers().get(1));
+            vrienden.add(friends.getUsers().get(2));
+            vrienden.add(friends.getUsers().get(3));
         }
-        else if(friends.get(1).getName().equals(Singleton.getInstance().getActiveUser().getName()))   {
-            vrienden.add(friends.get(0));
-            vrienden.add(friends.get(2));
-            vrienden.add(friends.get(3));
+        else if (friends.getUsers().get(1).getName().equals(Singleton.getInstance().getActiveUser().getName())) {
+            vrienden.add(friends.getUsers().get(0));
+            vrienden.add(friends.getUsers().get(2));
+            vrienden.add(friends.getUsers().get(3));
         }
-        else if(friends.get(2).getName().equals(Singleton.getInstance().getActiveUser().getName()))   {
-            vrienden.add(friends.get(0));
-            vrienden.add(friends.get(1));
-            vrienden.add(friends.get(3));
+        else if (friends.getUsers().get(2).getName().equals(Singleton.getInstance().getActiveUser().getName())) {
+            vrienden.add(friends.getUsers().get(0));
+            vrienden.add(friends.getUsers().get(1));
+            vrienden.add(friends.getUsers().get(3));
         }
-        else if(friends.get(3).getName().equals(Singleton.getInstance().getActiveUser().getName()))   {
-            vrienden.add(friends.get(0));
-            vrienden.add(friends.get(1));
-            vrienden.add(friends.get(2));
-        }
+        else if (friends.getUsers().get(3).getName().equals(Singleton.getInstance().getActiveUser().getName())) {
+            vrienden.add(friends.getUsers().get(0));
+            vrienden.add(friends.getUsers().get(1));
+            vrienden.add(friends.getUsers().get(2));}
+
 
         for(int i=0; i<= 3; i++) {
             switch (i) {

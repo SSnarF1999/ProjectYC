@@ -12,10 +12,12 @@
         android:layout_height="64dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="33dp"
+        android:layout_marginEnd="46dp"
         android:background="@android:color/background_dark"
         android:drawableStart="@android:drawable/ic_media_play"
         android:text="Switch User"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriends" />
 
@@ -25,10 +27,12 @@
         android:layout_height="64dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="33dp"
+        android:layout_marginEnd="46dp"
         android:background="@android:color/background_dark"
         android:drawableStart="@android:drawable/ic_media_play"
         android:text="Friends"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bRecipe" />
 
@@ -38,10 +42,12 @@
         android:layout_height="64dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="33dp"
+        android:layout_marginEnd="46dp"
         android:background="@android:color/background_dark"
         android:drawableStart="@android:drawable/ic_media_play"
         android:text="Recipes"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bGroups" />
 
@@ -51,10 +57,12 @@
         android:layout_height="64dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="33dp"
+        android:layout_marginEnd="46dp"
         android:background="@android:color/background_dark"
         android:drawableStart="@android:drawable/ic_media_play"
         android:text="Groups"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bAccount" />
 
@@ -64,10 +72,12 @@
         android:layout_height="64dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="33dp"
+        android:layout_marginEnd="46dp"
         android:background="@android:color/background_dark"
         android:drawableStart="@android:drawable/ic_media_play"
         android:text="Account"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
