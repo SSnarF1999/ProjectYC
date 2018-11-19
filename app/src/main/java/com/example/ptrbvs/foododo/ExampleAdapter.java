@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
+// bron van de code https://codinginflow.com/tutorials/android/parcelable
 public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder> {
     private ArrayList<ExampleItem> mExampleList;
     private OnItemClickListener mListener;

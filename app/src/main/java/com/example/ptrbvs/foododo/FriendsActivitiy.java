@@ -44,7 +44,7 @@ public class FriendsActivitiy extends AppCompatActivity {
             vrienden.add(friends.getUsers().get(2));}
 
 
-        for(int i=0; i<= 3; i++) {
+        for(int i=0; i<= 3; i++)
             switch (i) {
                 case 0:  bfriend0.setText(vrienden.get(0).getName());
                     break;
@@ -56,11 +56,6 @@ public class FriendsActivitiy extends AppCompatActivity {
         }
 
 
-
-
-
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -18,7 +18,7 @@ public class FransActivity extends AppCompatActivity {
         setContentView(R.layout.activity_frans);
 
         ImageView ivFrans = (ImageView) findViewById(R.id.ivFrans);
-        int imageRescource = getResources().getIdentifier("@drawable/schildpad", null, this.getPackageName());
+        int imageRescource = getResources().getIdentifier(Singleton.getInstance().getActiveUser().getProfilePic(), null, this.getPackageName());
         ivFrans.setImageResource(imageRescource);
     }
 
@@ -34,13 +34,13 @@ public class FransActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        User frans = (User)getIntent().getSerializableExtra("frans");
+
         final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
         switch (item.getItemId()){
             case R.id.action_menu:
 
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("account",frans);
+
                 intent1.putExtra("friends",friends);
                 this.startActivity(intent1);
                 return true;

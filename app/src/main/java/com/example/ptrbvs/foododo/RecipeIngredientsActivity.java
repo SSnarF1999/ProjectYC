@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+// bron van de code https://codinginflow.com/tutorials/android/parcelable
 public class RecipeIngredientsActivity extends AppCompatActivity {
 
     @Override
