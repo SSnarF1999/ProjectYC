@@ -15,7 +15,6 @@ public class Singleton {
     private ImageButton activeVote;
     private Meal winnerMeal;
 
-
     // private constructor restricted to this class itself
     private Singleton()
     {

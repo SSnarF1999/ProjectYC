@@ -59,48 +59,17 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe01 && !s.getActiveUser().isVoted()) {
                     ArrayList<Meal> meal = s.getMeals();
                     votechecker.vote(meal, meal.get(0), true);
-                    tScore01.setText(Integer.toString(meal.get(0).getScore()));
                     tCantvotemsg.setText("");
-                    s.setActiveVote(ibRecipe01);
                 }
                 else {
                     if (!s.getActiveUser().getPresent()) {
                         tCantvotemsg.setText("You can't vote if you won't attend the meal.");
                     }
-                    else {
-                        votechecker.vote(meal, meal.get(0),true);
-
-                    }
                 }
                 s.getActiveUser().setVoted(true);
+                tScore01.setText(Integer.toString(meal.get(0).getScore()));
             }
-        });
 
-
-        ibRecipe01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Singleton s = Singleton.getInstance();
-                final VoteChecker votechecker = new VoteChecker(s.getGroup());
-
-                if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe01 && !s.getActiveUser().isVoted()) {
-                    ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(0), true);
-                    tScore01.setText(Integer.toString(meal.get(0).getScore()));
-                    tCantvotemsg.setText("");
-                    s.setActiveVote(ibRecipe01);
-                }
-                else {
-                    if (!s.getActiveUser().getPresent()) {
-                        tCantvotemsg.setText("You can't vote if you won't attend the meal.");
-                    }
-                    else {
-                        votechecker.vote(meal, meal.get(0),true);
-
-                    }
-                }
-                s.getActiveUser().setVoted(true);
-            }
         });
 
         ibRecipe02.setOnClickListener(new View.OnClickListener() {
@@ -111,22 +80,18 @@ public class Tonights_recipeActivity extends AppCompatActivity {
 
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe02 && !s.getActiveUser().isVoted()) {
                     ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(1), true);
-                    tScore02.setText(Integer.toString(meal.get(1).getScore()));
+                    votechecker.vote(meal, meal.get(1),true);
                     tCantvotemsg.setText("");
-                    s.setActiveVote(ibRecipe02);
                 }
                 else {
                     if (!s.getActiveUser().getPresent()) {
                         tCantvotemsg.setText("You can't vote if you won't attend the meal.");
                     }
-                    else {
-                        votechecker.vote(meal, meal.get(1),true);
-
-                    }
                 }
                 s.getActiveUser().setVoted(true);
+                tScore02.setText(Integer.toString(meal.get(1).getScore()));
             }
+
         });
 
         ibRecipe03.setOnClickListener(new View.OnClickListener() {
@@ -138,21 +103,17 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe03 && !s.getActiveUser().isVoted()) {
                     ArrayList<Meal> meal = s.getMeals();
                     votechecker.vote(meal, meal.get(2), true);
-                    tScore03.setText(Integer.toString(meal.get(3).getScore()));
                     tCantvotemsg.setText("");
-                    s.setActiveVote(ibRecipe03);
                 }
                 else {
                     if (!s.getActiveUser().getPresent()) {
                         tCantvotemsg.setText("You can't vote if you won't attend the meal.");
                     }
-                    else {
-                        votechecker.vote(meal, meal.get(2),true);
-
-                    }
                 }
                 s.getActiveUser().setVoted(true);
+                tScore03.setText(Integer.toString(meal.get(2).getScore()));
             }
+
         });
 
         ibRecipe04.setOnClickListener(new View.OnClickListener() {
@@ -164,34 +125,19 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe04 && !s.getActiveUser().isVoted()) {
                     ArrayList<Meal> meal = s.getMeals();
                     votechecker.vote(meal, meal.get(3), true);
-                    tScore04.setText(Integer.toString(meal.get(3).getScore()));
                     tCantvotemsg.setText("");
-                    s.setActiveVote(ibRecipe04);
                 }
                 else {
                     if (!s.getActiveUser().getPresent()) {
                         tCantvotemsg.setText("You can't vote if you won't attend the meal.");
                     }
-                    else {
-                        votechecker.vote(meal, meal.get(3),true);
-
-                    }
                 }
                 s.getActiveUser().setVoted(true);
+                tScore04.setText(Integer.toString(meal.get(3).getScore()));
             }
+
         });
 
-        sAbsent.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                User activeUser = Singleton.getInstance().getActiveUser();
-                if (!isChecked) {
-                    activeUser.setPresent(false);
-                }
-                else {
-                    activeUser.setPresent(true);
-                }
-            }
-        });
 
         bCountVotes.setOnClickListener(new View.OnClickListener() {
             @Override
