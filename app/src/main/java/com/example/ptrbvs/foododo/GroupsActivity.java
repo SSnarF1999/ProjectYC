@@ -18,7 +18,6 @@ public class GroupsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_groups);
 
         final Button bGroup01 = (Button) findViewById(R.id.bGroup01);
-        final Button bGroup02 = (Button) findViewById(R.id.bGroup2);
         final User loggedUser = (User)getIntent().getSerializableExtra("account");
 
         bGroup01.setOnClickListener(new View.OnClickListener() {
@@ -30,13 +29,6 @@ public class GroupsActivity extends AppCompatActivity {
             }
         });
 
-        bGroup02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(GroupsActivity.this, GroupChosenActivitiy.class);
-                GroupsActivity.this.startActivity(registerIntent);
-            }
-        });
 
     }
     @Override

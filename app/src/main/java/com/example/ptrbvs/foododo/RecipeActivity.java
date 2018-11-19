@@ -32,6 +32,7 @@ public class RecipeActivity extends AppCompatActivity {
     }
 
     public void createExampleList() {
+        // bron van de code https://codinginflow.com/tutorials/android/parcelable
         mExampleList = new ArrayList<>();
         mExampleList.add(new ExampleItem(R.drawable.pasta02, "Pasta met rode saus","400 gram (runder) gehakt, 2 uien, 2 tenen knoflook, 500 gram pasta (spaghetti of tagliatelle), 1 blik tomaatstukjes (à 400 gr),2 blikjes tomatenpuree, 2 paprika\u0092s (of prei, of courgette) in (niet al te kleine) stukken Olijfolie Peper en zout Geraspte kaas","Zet een ruime hoeveelheid water in een grote pan met een snuf zout op het gas. Terwijl het water aan de kook komt, kun je beginnen met de rest. Verhit in een (grote) koekenpan of hapjespan een flinke scheut olijfolie en fruit daarin de ui en het knoflook. Voeg wanneer de ui van kleur verandert het gehakt toe en bak dit tot het gaar is. Voeg de paprika\u0092s toe en bak dit twee minuten mee. Doe nu de pasta in de pan, meestal ( voor de precieze kooktijd; zie de verpakking). Proef ongeveer elke minuut hoe de smaak van de pasta verandert. Als de pasta zacht wordt, maar nog wel een \u0091bite\u0092 heeft, is deze klaar (al dente). De pasta gaart namelijk nog even door. Voeg vervolgens aan het gehaktmengsel de tomaatstukjes en de tomatenpuree toe en laat dit rustig warm worden (tegen het koken aan), proef de saus en voeg eventueel zout en peper toe. Giet de pasta af en serveer de saus en de pasta en de kaas apart."));
         mExampleList.add(new ExampleItem(R.drawable.zuur, "Zuurkool","1¼ kg kruimige aardappelen, 500 g zuurkool, 2 elstar-appels, 2 boeren scharrelrookworsten (à 250 g), 40 g ongezouten boter (of margarine), 150 ml halfvolle melk","Schil de aardappelen en kook in 20 min. gaar. Laat de zuurkool uitlekken. Voeg na 10 min. de zuurkool toe aan de aardappelen.Giet het mengsel af als de aardappelen gaar zijn. Vang wat kookvocht op. Schil de appels en snijd in kwarten. Verwijder het klokhuis en snijd in plakjes. Verwarm de worst. Verhit de boter en bak de appel 5 min. op hoog vuur. Verwarm de melk. Stamp de aardappelen en zuurkool grof. Voeg de melk toe en wat kookvocht. Schep de appel en boter erbij en serveer met de worst."));
@@ -40,6 +41,7 @@ public class RecipeActivity extends AppCompatActivity {
     }
 
     public void buildRecyclerView() {
+        // bron van de code https://codinginflow.com/tutorials/android/parcelable
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);

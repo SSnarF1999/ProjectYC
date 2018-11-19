@@ -2,7 +2,7 @@ package com.example.ptrbvs.foododo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
+// bron van de code https://codinginflow.com/tutorials/android/parcelable
 public class ExampleItem implements Parcelable {
     private int mImageResource;
     private String mText1;

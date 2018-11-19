@@ -10,38 +10,15 @@
         android:id="@+id/bGroup01"
         android:layout_width="351dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/background_dark"
         android:drawableStart="@android:drawable/ic_media_play"
         android:text="@string/group_1"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bGroup2"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/bGroup2"
-        android:layout_width="351dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/background_dark"
-        android:drawableStart="@android:drawable/ic_media_play"
-        android:text="@string/group_2"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bGroup3"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/bGroup3"
-        android:layout_width="351dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="372dp"
-        android:background="@android:color/background_dark"
-        android:drawableStart="@android:drawable/ic_media_play"
-        android:text="@string/group_3"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

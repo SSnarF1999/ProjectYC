@@ -11,35 +11,41 @@
         android:id="@+id/bFriend0"
         android:layout_width="356dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="14dp"
         android:background="@android:color/black"
         android:text="@string/friend_01"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bFriend1"
         android:layout_width="356dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="14dp"
         android:background="@android:color/black"
         android:text="@string/friend_02"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend0" />
 
     <Button
         android:id="@+id/bFriend2"
         android:layout_width="354dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="14dp"
         android:background="@android:color/black"
         android:text="@string/friend_03"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bFriend1" />
 </android.support.constraint.ConstraintLayout>

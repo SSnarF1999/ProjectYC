@@ -34,13 +34,11 @@ public class TristanActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        User tristan = (User)getIntent().getSerializableExtra("tristan");
-        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
+
         switch (item.getItemId()){
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("account", tristan );
-                intent1.putExtra("friends",friends);
+
                 this.startActivity(intent1);
                 return true;
         }

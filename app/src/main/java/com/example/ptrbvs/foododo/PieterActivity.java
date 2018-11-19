@@ -34,13 +34,9 @@ public class PieterActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        User pieter = (User)getIntent().getSerializableExtra("pieter");
-        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
         switch (item.getItemId()){
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
-                intent1.putExtra("account", pieter);
-                intent1.putExtra("friends",friends);
                 this.startActivity(intent1);
                 return true;
         }

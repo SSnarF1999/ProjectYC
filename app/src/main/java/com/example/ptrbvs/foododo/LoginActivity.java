@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bPieter = (Button) findViewById(R.id.bPieter);
         final Button bFrans = (Button) findViewById(R.id.bFrans);
         final Button bTristan = (Button) findViewById(R.id.bTristan);
@@ -53,8 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
-                loginIntent.putExtra("pieter", pieter);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(pieter);
                 LoginActivity.this.startActivity(loginIntent);
 
@@ -65,8 +60,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
-                loginIntent.putExtra("frans", frans);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(frans);
                 LoginActivity.this.startActivity(loginIntent);
 
@@ -77,8 +71,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
-                loginIntent.putExtra("tristan", tristan);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(tristan);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -88,8 +81,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-                loginIntent.putExtra("joy", joy);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(joy);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -99,8 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, PieterActivity.class);
-                loginIntent.putExtra("pieter", pieter);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(pieter);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -110,8 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, FransActivity.class);
-                loginIntent.putExtra("frans", frans);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(frans);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -121,8 +111,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, TristanActivity.class);
-                loginIntent.putExtra("tristan", tristan);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(tristan);
                 LoginActivity.this.startActivity(loginIntent);
             }
@@ -132,8 +121,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-                loginIntent.putExtra("joy", joy);
-                loginIntent.putExtra("friends",users);
+
                 Singleton.getInstance().setActiveUser(joy);
                 LoginActivity.this.startActivity(loginIntent);
             }
