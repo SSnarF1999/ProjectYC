@@ -22,9 +22,12 @@ public class Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
         final TextView tname = (TextView) findViewById(R.id.editText);
-        tname.setText(Singleton.getInstance().getActiveUser().getName());
-
+        final ImageView account = (ImageView) findViewById(R.id.ivAccount);
+        User activeUser = Singleton.getInstance().getActiveUser();
+        tname.setText(activeUser.getName());
+        int imageRescource = getResources().getIdentifier(activeUser.getProfilePic(), null, this.getPackageName());
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        account.setImageResource(imageRescource);
 
         final Button bPreferences = (Button) findViewById(R.id.bPreferences);
 
