@@ -1,23 +1,22 @@
 package com.example.ptrbvs.foododo;
-
 import java.util.ArrayList;
 import java.io.Serializable;
-
 public class User implements Serializable {
 
     private String name;
     private String password;
-    private ArrayList<String> tags = new ArrayList();
+    private Boolean present = true;
+    private ArrayList<Tag> tags;
+    private String profilePic;
 
-    public User(String name, String password, ArrayList<String> tags) {
+    public User(String name, String password, ArrayList<Tag> tags, String profilePic) {
         this.name = name;
         this.password = password;
         this.tags = tags;
+        this.profilePic = profilePic;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -31,12 +30,28 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public ArrayList<String> getTags() {
+
+    public ArrayList<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(ArrayList<String> tags) {
+    public void setTags(ArrayList<Tag> tags) {
         this.tags = tags;
     }
-}
 
+    public Boolean getPresent() {
+        return present;
+    }
+
+    public void setPresent(Boolean present) {
+        this.present = present;
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
+    }
+}

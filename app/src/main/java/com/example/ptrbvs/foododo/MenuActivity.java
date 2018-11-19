@@ -8,6 +8,8 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MenuActivity extends AppCompatActivity {
 
     @Override
@@ -15,7 +17,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         final User loggedUser = (User)getIntent().getSerializableExtra("account");
-        final User[] friends = (User[])getIntent().getSerializableExtra("friends");
+        final ArrayList<User> friends = (ArrayList<User>)getIntent().getSerializableExtra("friends");
         final Button bAccount = (Button) findViewById(R.id.bAccount);
         final Button bFriends = (Button) findViewById(R.id.bFriends);
         final Button bGroups = (Button) findViewById(R.id.bGroups);

@@ -8,6 +8,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class FransActivity extends AppCompatActivity {
 
     @Override
@@ -33,9 +35,10 @@ public class FransActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         User frans = (User)getIntent().getSerializableExtra("frans");
-        final User[] friends = (User[])getIntent().getSerializableExtra("friends");
+        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
         switch (item.getItemId()){
             case R.id.action_menu:
+
                 Intent intent1 = new Intent(this, MenuActivity.class);
                 intent1.putExtra("account",frans);
                 intent1.putExtra("friends",friends);

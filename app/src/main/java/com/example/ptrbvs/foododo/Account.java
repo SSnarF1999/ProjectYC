@@ -18,11 +18,11 @@ public class Account extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        User loggedUser = (User)getIntent().getSerializableExtra("account");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
         final TextView tname = (TextView) findViewById(R.id.editText);
-        tname.setText(loggedUser.getName());
+        tname.setText(Singleton.getInstance().getActiveUser().getName());
 
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 

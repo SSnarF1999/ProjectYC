@@ -9,6 +9,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class FriendsActivitiy extends AppCompatActivity {
 
     @SuppressLint("RestrictedApi")
@@ -19,37 +21,37 @@ public class FriendsActivitiy extends AppCompatActivity {
         final Button bfriend0 = (Button) findViewById(R.id.bFriend0);
         final Button bfriend1 = (Button) findViewById(R.id.bFriend1);
         final Button bfriend2 = (Button) findViewById(R.id.bFriend2);
-        final User[] friends = (User[])getIntent().getSerializableExtra("friends");
-        final User loggedUser = (User)getIntent().getSerializableExtra("loggedUser");
-        User[] vrienden = new User[4];
-        if (friends[0].getName().equals(loggedUser.getName())) {
-            vrienden[0] = friends[1];
-            vrienden[1] = friends[2];
-            vrienden[2] = friends[3];
+        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
+
+        ArrayList<User> vrienden = new ArrayList<>();
+        if (friends.get(0).getName().equals(Singleton.getInstance().getActiveUser().getName())) {
+            vrienden.add(friends.get(1));
+            vrienden.add(friends.get(2));
+            vrienden.add(friends.get(3));
         }
-        else if(friends[1].getName().equals(loggedUser.getName()))   {
-            vrienden[0] = friends[0];
-            vrienden[1] = friends[2];
-            vrienden[2] = friends[3];
+        else if(friends.get(1).getName().equals(Singleton.getInstance().getActiveUser().getName()))   {
+            vrienden.add(friends.get(0));
+            vrienden.add(friends.get(2));
+            vrienden.add(friends.get(3));
         }
-        else if(friends[2].getName().equals(loggedUser.getName()))   {
-            vrienden[0] = friends[0];
-            vrienden[1] = friends[1];
-            vrienden[2] = friends[3];
+        else if(friends.get(2).getName().equals(Singleton.getInstance().getActiveUser().getName()))   {
+            vrienden.add(friends.get(0));
+            vrienden.add(friends.get(1));
+            vrienden.add(friends.get(3));
         }
-        else if(friends[3].getName().equals(loggedUser.getName()))   {
-            vrienden[0] = friends[0];
-            vrienden[1] = friends[1];
-            vrienden[2] = friends[2];
+        else if(friends.get(3).getName().equals(Singleton.getInstance().getActiveUser().getName()))   {
+            vrienden.add(friends.get(0));
+            vrienden.add(friends.get(1));
+            vrienden.add(friends.get(2));
         }
 
         for(int i=0; i<= 3; i++) {
             switch (i) {
-                case 0:  bfriend0.setText(vrienden[0].getName());
+                case 0:  bfriend0.setText(vrienden.get(0).getName());
                     break;
-                case 1:  bfriend1.setText(vrienden[1].getName());
+                case 1:  bfriend1.setText(vrienden.get(1).getName());
                     break;
-                case 2:  bfriend2.setText(vrienden[2].getName());
+                case 2:  bfriend2.setText(vrienden.get(2).getName());
                     break;
             }
         }

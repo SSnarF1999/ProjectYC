@@ -1,8 +1,8 @@
 package com.example.ptrbvs.foododo;
-
-public class MealData {
-
-    public Meal[] generateMeals() {
+import java.io.Serializable;
+import java.util.ArrayList;
+public class MealData implements Serializable {
+    public ArrayList<Meal> loadMeals() {
         //Pasta met rode saus
         String ingr1 = "400g rundergehakt," +
                 " 2 uien, gesnipperd," +
@@ -14,13 +14,11 @@ public class MealData {
                 " Olijfolie," +
                 " Peper en zout," +
                 " Geraspte kaas";
-
         String tags1 = " italiaans, " +
                 " warm," +
                 " kinderen," +
                 " pasta," +
                 " hoofdgerecht";
-
         String instr1 = "Zet een ruime hoeveelheid water in een grote pan met een snuf zout op het gas." +
                 " Terwijl het water aan de kook komt, kun je beginnen met de rest. Verhit in een (grote)" +
                 " koekenpan of hapjespan een flinke scheut olijfolie en fruit daarin de ui en het knoflook." +
@@ -32,11 +30,8 @@ public class MealData {
                 " Voeg vervolgens aan het gehaktmengsel de tomaatstukjes en de tomatenpuree toe en " +
                 "laat dit rustig warm worden (tegen het koken aan), proef de saus en voeg eventueel" +
                 " zout en peper toe. Giet de pasta af en serveer de saus en de pasta en de kaas apart.\n";
-        //haalt adem
-
+        //*haalt adem*
         Meal ml1 =  new Meal("Pasta m. rode saus", ingr1.split(", "), tags1.split(", "), 4, 20, instr1);
-
-
         //Zuurkool
         String ingr2 = "1.25kg aardappelen," +
                 " 500g zuurkool," +
@@ -44,13 +39,11 @@ public class MealData {
                 " 2 boeren scharrelrookworsten," +
                 " 40g ongezouten boter/margarine," +
                 " 150ml halfvolle melk";
-
         String tags2 = "Kool," +
                 " Groente," +
                 " aardappel," +
                 " Hollands," +
                 " Duits";
-
         String instr2 = "Schil de aardappelen en kook in 20 min. gaar. Laat de zuurkool uitlekken." +
                 " Voeg na 10 min. de zuurkool toe aan de aardappelen.Giet het mengsel af als de" +
                 " aardappelen gaar zijn. Vang wat kookvocht op. Schil de appels en snijd in kwarten." +
@@ -58,10 +51,7 @@ public class MealData {
                 " bak de appel 5 min. op hoog vuur. Verwarm de melk. Stamp de aardappelen en " +
                 "zuurkool grof. Voeg de melk toe en wat kookvocht. Schep de appel en boter erbij en" +
                 " serveer met de worst.";
-
         Meal ml2 =  new Meal("Pasta m. rode saus", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
-
-
         //Pizza Calzone
         String ingr3 = "7g gedroogde gist (zakje)," +
                 " 1 tl witte basterdsuiker," +
@@ -76,11 +66,9 @@ public class MealData {
                 " 150g yorkham," +
                 " 250g romatomaten," +
                 " 125g mozzarella";
-
         String tags3 = "Pizza," +
                 " Italiaans," +
                 " Kinderen";
-
         String instr3 = "Doe de gist en het suiker in een kom en roer er 50 ml (per 4 personen)" +
                 " van het water door. Laat 5 min. rusten op een warme, tochtvrije plek. Meng " +
                 "ondertussen in een kom de bloem met het zout en schenk er het gistmengsel, de helft" +
@@ -100,9 +88,7 @@ public class MealData {
                 "beleg de pizza ermee en vouw dubbel. Druk de randen aan en vouw naar binnen." +
                 " Leg de pizza's op een met bakpapier beklede bakplaat. Bak net onder het midden " +
                 "van de oven in ca. 15 min. goudbruin.\n";
-
         Meal ml3 = new Meal("Pizza Calzone", ingr3.split(", "), tags3.split(", "), 4, 30, instr3);
-
         //Brocolli-aardappeltaart
         String ingr4 = " 700 g broccoli," +
                 " 700 g aardappelschijfjes," +
@@ -112,12 +98,10 @@ public class MealData {
                 " 100 g geraspte belegen kaas," +
                 " 100 g eikenbladslamelange (zak)," +
                 " 3 el sladressing knoflook";
-
         String tags4 = "vegetarisch," +
                 " groente," +
                 " gezond," +
                 " bagger";
-
         String instr4 = "Verwarm de oven voor op 200 °C. Leg een royaal vel bakpapier in de " +
                 "springvorm en druk in de rand goed aan.\n" +
                 "Snijd de broccoli in kleine roosjes en de steel in plakjes. Kook de broccoli in" +
@@ -128,15 +112,12 @@ public class MealData {
                 " Bak de taart in 35-40 min. goudbruin en gaar.\n" +
                 "Neem de taart uit de oven en laat 5 min. staan. Maak ondertussen de slamelange " +
                 "aan met de dressing. Snijd de taart in punten en serveer met de salade.\n";
-
         Meal ml4 = new Meal("Brocolli-aardappeltaart", ingr4.split(", "), tags4.split(", "), 4, 40, instr4);
-
-        Meal[] meals = new Meal[4];
-        meals[0] = ml1;
-        meals[1] = ml2;
-        meals[2] = ml3;
-        meals[3] = ml4;
-
+        ArrayList<Meal> meals = new ArrayList();
+        meals.add(ml1);
+        meals.add(ml2);
+        meals.add(ml3);
+        meals.add(ml4);
         return meals;
     }
 }

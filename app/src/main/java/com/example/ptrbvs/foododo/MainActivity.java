@@ -14,10 +14,11 @@ import android.view.Menu;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
-    userData data = new userData();
-    User[] users = data.generateuserData();
+
 
 
     @Override
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         User joy = (User)getIntent().getSerializableExtra("joy");
-        final User[] friends = (User[])getIntent().getSerializableExtra("friends");
+        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
         switch (item.getItemId()){
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);

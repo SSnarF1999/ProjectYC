@@ -8,6 +8,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class PieterActivity extends AppCompatActivity {
 
     @Override
@@ -33,7 +35,7 @@ public class PieterActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         User pieter = (User)getIntent().getSerializableExtra("pieter");
-        final User[] friends = (User[])getIntent().getSerializableExtra("friends");
+        final ArrayList<User> friends = (ArrayList<User>) getIntent().getSerializableExtra("friends");
         switch (item.getItemId()){
             case R.id.action_menu:
                 Intent intent1 = new Intent(this, MenuActivity.class);
