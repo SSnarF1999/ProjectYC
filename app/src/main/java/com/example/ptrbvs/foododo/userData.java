@@ -2,6 +2,8 @@ package com.example.ptrbvs.foododo;
 import java.util.ArrayList;
 public class userData {
 
+    public userData() {}
+
     public ArrayList<User> LoadUserData(){
         String name = "Tristan";
         String password = "drums";

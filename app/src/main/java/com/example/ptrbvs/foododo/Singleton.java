@@ -1,5 +1,9 @@
 package com.example.ptrbvs.foododo;
 
+import android.widget.ImageButton;
+
+import java.util.ArrayList;
+
 public class Singleton {
     // static variable single_instance of type Singleton
     private static Singleton single_instance = null;
@@ -7,6 +11,8 @@ public class Singleton {
     // data
     private User activeUser;
     private Group group;
+    private ArrayList<Meal> meals;
+    private ImageButton activeVote;
 
 
     // private constructor restricted to this class itself
@@ -37,6 +43,19 @@ public class Singleton {
         this.group = group;
     }
 
+    public ArrayList<Meal> getMeals() {
+        return meals;
+    }
 
+    public void setMeals(ArrayList<Meal> meals) {
+        this.meals = meals;
+    }
 
+    public ImageButton getActiveVote() {
+        return activeVote;
+    }
+
+    public void setActiveVote(ImageButton activeVote) {
+        this.activeVote = activeVote;
+    }
 }

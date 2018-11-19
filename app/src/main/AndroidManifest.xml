@@ -88,10 +88,6 @@
         <activity
             android:name=".MenuActivity"
             android:label="MENU" />
-        <activity
-            android:name=".PieterActivity" />
-        <activity android:name=".FransActivity" />
-        <activity android:name=".TristanActivity" />
     </application>
 
 </manifest>

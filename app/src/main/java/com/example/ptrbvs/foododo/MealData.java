@@ -32,6 +32,7 @@ public class MealData implements Serializable {
                 " zout en peper toe. Giet de pasta af en serveer de saus en de pasta en de kaas apart.\n";
         //*haalt adem*
         Meal ml1 =  new Meal("Pasta m. rode saus", ingr1.split(", "), tags1.split(", "), 4, 20, instr1);
+
         //Zuurkool
         String ingr2 = "1.25kg aardappelen," +
                 " 500g zuurkool," +
@@ -51,7 +52,8 @@ public class MealData implements Serializable {
                 " bak de appel 5 min. op hoog vuur. Verwarm de melk. Stamp de aardappelen en " +
                 "zuurkool grof. Voeg de melk toe en wat kookvocht. Schep de appel en boter erbij en" +
                 " serveer met de worst.";
-        Meal ml2 =  new Meal("Pasta m. rode saus", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
+        Meal ml2 =  new Meal("Zuurkool", ingr2.split(", "), tags2.split(", "), 4, 40, instr2);
+
         //Pizza Calzone
         String ingr3 = "7g gedroogde gist (zakje)," +
                 " 1 tl witte basterdsuiker," +
