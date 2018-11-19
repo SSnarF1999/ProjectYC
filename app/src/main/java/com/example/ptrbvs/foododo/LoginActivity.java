@@ -32,8 +32,10 @@ public class LoginActivity extends AppCompatActivity {
         ImageButton ibFrans= (ImageButton) findViewById(R.id.ibFrans);
         ImageButton ibTristan= (ImageButton) findViewById(R.id.ibTristan);
         ImageButton ibJoy= (ImageButton) findViewById(R.id.ibJoy);
+
         userData data = new userData();
         final ArrayList<User> users = data.LoadUserData();
+
         Group group = new Group();
         group.setUsers(users);
         Singleton.getInstance().setGroup(group);
@@ -42,7 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         final User joy = users.get(2);
         final User frans = users.get(3);
 
-
+        MealData md = new MealData();
+        Singleton.getInstance().setMeals(md.loadMeals());
 
 
 

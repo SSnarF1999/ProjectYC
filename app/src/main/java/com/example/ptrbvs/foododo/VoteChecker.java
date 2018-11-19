@@ -3,44 +3,37 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class VoteChecker {
-    MealData mealData = new MealData();
 
-        protected Group group ;
-        protected ArrayList<Tag> groupTags = new ArrayList();
-        ArrayList<Meal> mealList = mealData.loadMeals();
+    private boolean voted = false;
 
-        public VoteChecker(Group group) {
-            this.group = group;
-        }
+    protected Group group;
+    protected ArrayList<Tag> groupTags = new ArrayList();
 
-        protected void setAbsent(User absentUser) {
-            ArrayList<User> currentUserList = this.group.getUsers();
-            ArrayList<User> newUserList = new ArrayList();
 
-            //Loop trough group to find target User
-            for (User user : currentUserList) {
-                if (user == absentUser) {
-                    //set absent
-                    user.setPresent(false);
-                    newUserList.add(user);
-                } else {
-                    newUserList.add(user);
+    public VoteChecker(Group group) {
+        this.group = group;
+    }
+
+    protected void vote(ArrayList<Meal> mealList, Meal votedMeal, boolean doAdd) {
+        if (doAdd) {
+            if (!voted) {
+                for (Meal meal : mealList) {
+                    if (votedMeal.getName().equals(meal.getName())) {
+                        meal.setScore(meal.getScore() + 1);
+                        voted = true;
+                    }
                 }
             }
-            //implement updated group
-            this.group.setUsers(newUserList);
-        }
-
-        protected void vote(Meal votedMeal) {
-            //if () { if user has not already voted for this item
+        } else {
             for (Meal meal : mealList) {
                 if (votedMeal.getName().equals(meal.getName())) {
-                    meal.setScore(meal.getScore() + 1);
+                    meal.setScore(meal.getScore() - 1);
                 }
             }
         }
+    }
 
-        protected void findMatches() {
+        protected void findMatches () {
             ArrayList<Tag> similairTags = new ArrayList();
 
             for (User user : group.getUsers()) {
@@ -77,11 +70,10 @@ public class VoteChecker {
                     }
                 }
             }
+
             Collections.sort(similairTags, new TagComparator());
             this.groupTags = similairTags;
-        }
+    }
         //wollah tantoe veel parentheses.
         //ik ben hier dus trots op.
-
-    }
-
+}
