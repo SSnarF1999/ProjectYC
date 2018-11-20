@@ -20,7 +20,12 @@ public class Tonights_recipeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tonights_recipe);
 
-        final ArrayList<Meal> meal = Singleton.getInstance().getMeals();
+        ArrayList<Meal> meal = Singleton.getInstance().getMeals();
+
+        for (Meal ml : meal ) {
+            System.out.println(ml.getName() + " score: " + Integer.toString(ml.getScore()));
+        }
+
         int imageRescource1 = getResources().getIdentifier("@drawable/pasta02", null, this.getPackageName());
         int imageRescource2 = getResources().getIdentifier("@drawable/zuur", null, this.getPackageName());
         int imageRescource3 = getResources().getIdentifier("@drawable/pizza3", null, this.getPackageName());
@@ -54,11 +59,12 @@ public class Tonights_recipeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Singleton s = Singleton.getInstance();
-                final VoteChecker votechecker = new VoteChecker(s.getGroup());
+                ArrayList<Meal> meal = s.getMeals();
+
+                final VoteChecker vc = new VoteChecker(s.getGroup());
 
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe01 && !s.getActiveUser().isVoted()) {
-                    ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(0), true);
+                    vc.vote(meal, meal.get(0));
                     tCantvotemsg.setText("");
                 }
                 else {
@@ -68,6 +74,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 }
                 s.getActiveUser().setVoted(true);
                 tScore01.setText(Integer.toString(meal.get(0).getScore()));
+                s.setMeals(meal);
             }
 
         });
@@ -76,11 +83,12 @@ public class Tonights_recipeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Singleton s = Singleton.getInstance();
-                final VoteChecker votechecker = new VoteChecker(s.getGroup());
+                ArrayList<Meal> meal = s.getMeals();
+
+                final VoteChecker vc = new VoteChecker(s.getGroup());
 
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe02 && !s.getActiveUser().isVoted()) {
-                    ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(1),true);
+                    vc.vote(meal, meal.get(1));
                     tCantvotemsg.setText("");
                 }
                 else {
@@ -90,6 +98,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 }
                 s.getActiveUser().setVoted(true);
                 tScore02.setText(Integer.toString(meal.get(1).getScore()));
+                s.setMeals(meal);
             }
 
         });
@@ -98,11 +107,12 @@ public class Tonights_recipeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Singleton s = Singleton.getInstance();
-                final VoteChecker votechecker = new VoteChecker(s.getGroup());
+                ArrayList<Meal> meal = s.getMeals();
+
+                final VoteChecker vc = new VoteChecker(s.getGroup());
 
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe03 && !s.getActiveUser().isVoted()) {
-                    ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(2), true);
+                    vc.vote(meal, meal.get(2));
                     tCantvotemsg.setText("");
                 }
                 else {
@@ -112,6 +122,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 }
                 s.getActiveUser().setVoted(true);
                 tScore03.setText(Integer.toString(meal.get(2).getScore()));
+                s.setMeals(meal);
             }
 
         });
@@ -120,11 +131,12 @@ public class Tonights_recipeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Singleton s = Singleton.getInstance();
-                final VoteChecker votechecker = new VoteChecker(s.getGroup());
+                ArrayList<Meal> meal = s.getMeals();
+
+                final VoteChecker vc = new VoteChecker(s.getGroup());
 
                 if (s.getActiveUser().getPresent() && s.getActiveVote() != ibRecipe04 && !s.getActiveUser().isVoted()) {
-                    ArrayList<Meal> meal = s.getMeals();
-                    votechecker.vote(meal, meal.get(3), true);
+                    vc.vote(meal, meal.get(3));
                     tCantvotemsg.setText("");
                 }
                 else {
@@ -134,6 +146,7 @@ public class Tonights_recipeActivity extends AppCompatActivity {
                 }
                 s.getActiveUser().setVoted(true);
                 tScore04.setText(Integer.toString(meal.get(3).getScore()));
+                s.setMeals(meal);
             }
 
         });
