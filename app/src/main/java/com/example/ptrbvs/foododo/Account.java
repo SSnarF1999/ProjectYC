@@ -37,7 +37,7 @@ public class Account extends AppCompatActivity {
 
         String preferenceString = "";
         for (Tag tag : Singleton.getInstance().getActiveUser().getTags()) {
-            preferenceString = preferenceString + tag.getName() + ", ";
+            preferenceString = preferenceString + tag.getName() + "\n";
         }
         tPreferences.setText(preferenceString);
 
