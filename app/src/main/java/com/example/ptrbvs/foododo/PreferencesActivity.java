@@ -57,11 +57,16 @@ public class PreferencesActivity extends AppCompatActivity {
 
     public void finalSelection (View view) {
         String final_preferences_selection = "";
+        ArrayList<Tag> tags = new ArrayList();
 
         for (String Preferences : preferences) {
             final_preferences_selection = final_preferences_selection + Preferences + "\n";
+            Tag t = new Tag(Preferences);
+            tags.add(t);
+
         }
         final_preferences.setText(final_preferences_selection);
+        Singleton.getInstance().getActiveUser().setTags(tags);
     }
 
 }

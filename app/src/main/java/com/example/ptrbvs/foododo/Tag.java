@@ -4,9 +4,8 @@ public class Tag {
     protected String name;
     protected int score;
 
-    public Tag(String name, int score) {
+    public Tag(String name) {
         this.name = name;
-        this.score = score;
     }
 
     public String getName() {

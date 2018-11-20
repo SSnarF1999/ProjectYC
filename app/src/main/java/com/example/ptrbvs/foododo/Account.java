@@ -2,6 +2,7 @@ package com.example.ptrbvs.foododo;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.preference.PreferenceScreen;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,6 +13,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Account extends AppCompatActivity {
 
@@ -30,7 +33,13 @@ public class Account extends AppCompatActivity {
         account.setImageResource(imageRescource);
 
         final Button bPreferences = (Button) findViewById(R.id.bPreferences);
+        final TextView tPreferences = (TextView) findViewById(R.id.tPreferences);
 
+        String preferenceString = "";
+        for (Tag tag : Singleton.getInstance().getActiveUser().getTags()) {
+            preferenceString = preferenceString + tag.getName() + ", ";
+        }
+        tPreferences.setText(preferenceString);
 
         bPreferences.setOnClickListener(new View.OnClickListener() {
             @Override
