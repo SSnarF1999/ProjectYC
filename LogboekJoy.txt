@@ -19,4 +19,5 @@ Donderdag 15-11 Planning gemaakt voor de komende 2 dagen. Alle userstories die n
 
 Vrijdag 16-11 Overige userstories besproken en hoe we het gaan aanpakken tot aan de deadline. Zorgen voor de juiste afbeeldingen bij de juiste recepten. Met frans gekeken naar hoe we het stemmen vorm gaan geven. Smiddags cursus Mendix dus not availible. 
 
-Maandag 19-11 Samen met pieter naar de layout gekeken en evenutele fouten in de app. Alles recht gezet qua buttons in de ochtend. Scrumplan afmaken en mooi maken. Alle fouten er uit halen en oplossen in de app met frans in de middag. App afmaken en zorgen dat het werkt!! 
+Maandag 19-11 Samen met pieter naar de layout gekeken en evenutele fouten in de app. Alles recht gezet qua buttons in de ochtend. Scrumplan afmaken en mooi maken. Alle fouten er uit halen en oplossen in de app met frans in de middag. Savonds pieter op weg geholpen et preferences
+Dinsdag 20-11 add button weggehaald en zoekbutton weggehaald. 
