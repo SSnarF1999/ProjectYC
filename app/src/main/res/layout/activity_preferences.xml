@@ -12,10 +12,10 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="8dp"
         android:text="@string/select_preferences"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/pref_peanut" />
+        app:layout_constraintTop_toBottomOf="@+id/bSelectP" />
 
     <!--Title and message-->
     <TextView
@@ -122,8 +122,10 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pref_peanut" />
+        app:layout_constraintTop_toBottomOf="@+id/pref_peanut"
+        app:layout_constraintVertical_bias="0.564" />
 
     <!--Constraints-->
     <android.support.constraint.Guideline
