@@ -1,0 +1,22 @@
+logboek Joy Droogsma
+dinsdag 6-11 In de ochtend les over scrum. schrijven scrumplan. idee bedenken met groep. Bedenken van userstories. Instaleren github en android studio. 
+
+Woensdag 7-11 Git met sourcetree werkend maken. Trello, slack en groepapp aanmaken. Scrumplan verder uitschrijven. Alvast classes aanmaken in android studio met de benodigde atrributen(group class, user class en recipe class)
+
+Donderdag 8-11 Plan van aanpak goed laten keuren. Beginnen met applicatie. Rollen verdelen en userstories verdelen. Ik ga front end doen. 
+
+Vrijdag 9-11 Ochtend Jerry te veel aan het praten over nieuwe werkplekken dus niet aan de applicatie toe gekomen. Smiddags time management training
+
+Zaterdag en zondag 10-11/11-11 Paginas(activity's) aanmaken. Menu optie aanmaken met de benodigde paginas in het menu. Inlogpagina en registreer pagina maken en werkend door de gegevens te kunnen invullen.
+
+Maandag 12-11 Alle pagina's aan elkaar linken door middel van onclick. Pagina's opmaken en er mooi uit laten zien. De benodigde buttons toevoegen(imagebutton/button).  Welkom pagina gemaakt, met plaatje en naam ej je wordt welkom geheten.
+
+Dinsdag 13-11 Menu in navbar veranderen naar een menu pagina in de zelfde stijl als de rest van de layout. Gridbox maken op inlogpagina, dat je met je eigen plaatje/account kan inloggen. Registreer pagina kan weg. 
+
+Woensdag 14-11 De recepten pagina meteen scrollview zodat je alle ingredienten door middel van een scrolloptie kan bekijken. Zorgen voor een logout button. 
+
+Donderdag 15-11 Planning gemaakt voor de komende 2 dagen. Alle userstories die nog over zijn op een rijtje gezet. Taken verdeeld. Recepten arraylist aangemaakt. Zorgen dat je door middel van parcelable het recept in een lijst hebt staan en als je er op klikt het recept op een nieuwe pagina ziet met alle ingredienten. 
+
+Vrijdag 16-11 Overige userstories besproken en hoe we het gaan aanpakken tot aan de deadline. Zorgen voor de juiste afbeeldingen bij de juiste recepten. Met frans gekeken naar hoe we het stemmen vorm gaan geven. Smiddags cursus Mendix dus not availible. 
+
+Maandag 19-11 Samen met pieter naar de layout gekeken en evenutele fouten in de app. Alles recht gezet qua buttons in de ochtend. Scrumplan afmaken en mooi maken. Alle fouten er uit halen en oplossen in de app met frans in de middag. App afmaken en zorgen dat het werkt!! Plaatjes van recepten op de voting samen met frans 
