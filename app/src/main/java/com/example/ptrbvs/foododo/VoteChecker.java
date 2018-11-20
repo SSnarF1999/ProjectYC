@@ -14,21 +14,10 @@ public class VoteChecker {
         this.group = group;
     }
 
-    protected void vote(ArrayList<Meal> mealList, Meal votedMeal, boolean doAdd) {
-        if (doAdd) {
-            if (!voted) {
-                for (Meal meal : mealList) {
-                    if (votedMeal.getName().equals(meal.getName())) {
-                        meal.setScore(meal.getScore() + 1);
-                        voted = true;
-                    }
-                }
-            }
-        } else {
-            for (Meal meal : mealList) {
-                if (votedMeal.getName().equals(meal.getName())) {
-                    meal.setScore(meal.getScore() - 1);
-                }
+    protected void vote(ArrayList<Meal> mealList, Meal votedMeal) {
+        for (Meal meal : mealList) {
+            if (votedMeal.getName().equals(meal.getName())) {
+                meal.setScore(meal.getScore() + 1);
             }
         }
     }
@@ -76,8 +65,12 @@ public class VoteChecker {
     }
 
     public Meal getBest() {
-        Collections.sort(Singleton.getInstance().getMeals(), new MealComparator());
-        return Singleton.getInstance().getMeals().get(0);
+        ArrayList<Meal> sortedMeals =  new ArrayList();
+        for (Meal meal : Singleton.getInstance().getMeals()) {
+            sortedMeals.add(meal);
+        }
+        Collections.sort(sortedMeals, new MealComparator());
+        return sortedMeals.get(sortedMeals.size()-1);
     }
 
 }

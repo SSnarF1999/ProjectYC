@@ -40,10 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         final User joy = users.get(2);
         final User frans = users.get(3);
 
-        MealData md = new MealData();
-        Singleton.getInstance().setMeals(md.loadMeals());
-
-
+        //Generate meals only on first launch
+        if (Singleton.getInstance().getMeals() == null) {
+            MealData md = new MealData();
+            Singleton.getInstance().setMeals(md.loadMeals());
+        }
 
         bPieter.setOnClickListener(new View.OnClickListener() {
             @Override
